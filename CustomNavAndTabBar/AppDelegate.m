@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "BaseTabBarController.h"
+#import "PushViewController.h"
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -17,9 +18,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    BaseTabBarController *baseBar = [[BaseTabBarController alloc] init];
+    baseBar.delegate = self;
+    self.window.rootViewController = baseBar;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
+#pragma mark - 将要选中tabBar上按钮的时候会调用这个协议方法
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    
+    if ([tabBarController.viewControllers indexOfObject:viewController] == 1) {
+        PushViewController *pushVC = [[PushViewController alloc] init];
+        pushVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        [tabBarController presentViewController:pushVC animated:NO completion:nil];
+        return NO;
+
+    }else{
+        return YES;
+    }
+    
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
