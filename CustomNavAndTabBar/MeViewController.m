@@ -8,6 +8,7 @@
 
 #import "MeViewController.h"
 #import "SkinViewController.h"
+#import "GeRenMessageViewController.h"
 @interface MeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataSource;
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    _dataSource = [[NSMutableArray alloc] initWithObjects:@"皮肤管理",@"设置", nil];
+    _dataSource = [[NSMutableArray alloc] initWithObjects:@"皮肤管理",@"个人信息", nil];
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     _tableView.delegate = self;
@@ -43,12 +44,15 @@
     if (indexPath.row == 0) {
         SkinViewController *skin = [[SkinViewController alloc] init];
         
-//        SkinTableViewController *skin = [[SkinTableViewController alloc] init];
-        
+        skin.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:skin animated:YES];
-        
-        
-        
+   
+    }else{
+        //个人信息
+        GeRenMessageViewController *view = [[GeRenMessageViewController alloc] init];
+        view.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:view animated:YES];
+
         
     }
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];

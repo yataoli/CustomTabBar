@@ -24,6 +24,7 @@
 		8A69A2251F2B0ACC004F8BD4 /* UIColor+HexRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A2241F2B0ACC004F8BD4 /* UIColor+HexRGB.m */; };
 		8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A2271F2B0F4D004F8BD4 /* MyTabBar.m */; };
 		8A69A22B1F2B16EF004F8BD4 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A22A1F2B16EF004F8BD4 /* PushViewController.m */; };
+		8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A81E9371F593F4E000A3C8E /* GeRenMessageViewController.m */; };
 		8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3B7241F383E23001E70A7 /* SkinViewController.m */; };
 		8AA3B72D1F38448A001E70A7 /* SkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3B72C1F38448A001E70A7 /* SkinManager.m */; };
 		8AA3B7321F384D2C001E70A7 /* 1098.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3B72E1F384D2C001E70A7 /* 1098.bundle */; };
@@ -88,6 +89,8 @@
 		8A69A2271F2B0F4D004F8BD4 /* MyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBar.m; sourceTree = "<group>"; };
 		8A69A2291F2B16EF004F8BD4 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		8A69A22A1F2B16EF004F8BD4 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		8A81E9361F593F4E000A3C8E /* GeRenMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeRenMessageViewController.h; sourceTree = "<group>"; };
+		8A81E9371F593F4E000A3C8E /* GeRenMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeRenMessageViewController.m; sourceTree = "<group>"; };
 		8AA3B7231F383E23001E70A7 /* SkinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkinViewController.h; sourceTree = "<group>"; };
 		8AA3B7241F383E23001E70A7 /* SkinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkinViewController.m; sourceTree = "<group>"; };
 		8AA3B72B1F38448A001E70A7 /* SkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkinManager.h; sourceTree = "<group>"; };
@@ -241,10 +244,8 @@
 				8A1FB5071F4A6DDE00DDC445 /* 首页 */,
 				8A69A21D1F2B0831004F8BD4 /* ShopCarViewController.h */,
 				8A69A21E1F2B0831004F8BD4 /* ShopCarViewController.m */,
-				8A69A2201F2B084D004F8BD4 /* MeViewController.h */,
-				8A69A2211F2B084D004F8BD4 /* MeViewController.m */,
-				8A69A2291F2B16EF004F8BD4 /* PushViewController.h */,
-				8A69A22A1F2B16EF004F8BD4 /* PushViewController.m */,
+				8A81E9351F593ED6000A3C8E /* 我的界面 */,
+				8A81E9341F593EBC000A3C8E /* 中间按钮界面 */,
 				8A69A1F01F2B0652004F8BD4 /* Assets.xcassets */,
 				8A69A1F21F2B0652004F8BD4 /* LaunchScreen.storyboard */,
 				8A69A1F51F2B0652004F8BD4 /* Info.plist */,
@@ -290,6 +291,26 @@
 				8AA3B7391F385016001E70A7 /* MyNavigationViewController.m */,
 			);
 			name = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		8A81E9341F593EBC000A3C8E /* 中间按钮界面 */ = {
+			isa = PBXGroup;
+			children = (
+				8A69A2291F2B16EF004F8BD4 /* PushViewController.h */,
+				8A69A22A1F2B16EF004F8BD4 /* PushViewController.m */,
+			);
+			name = "中间按钮界面";
+			sourceTree = "<group>";
+		};
+		8A81E9351F593ED6000A3C8E /* 我的界面 */ = {
+			isa = PBXGroup;
+			children = (
+				8A69A2201F2B084D004F8BD4 /* MeViewController.h */,
+				8A69A2211F2B084D004F8BD4 /* MeViewController.m */,
+				8A81E9361F593F4E000A3C8E /* GeRenMessageViewController.h */,
+				8A81E9371F593F4E000A3C8E /* GeRenMessageViewController.m */,
+			);
+			name = "我的界面";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +516,7 @@
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
+				8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */,
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
 				8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */,
@@ -643,7 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WJ9SVRFBU9;
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LYDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,7 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WJ9SVRFBU9;
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LYDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
