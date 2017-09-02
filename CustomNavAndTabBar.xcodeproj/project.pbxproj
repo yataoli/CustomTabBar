@@ -11,6 +11,7 @@
 		8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50C1F4A735F00DDC445 /* SingleCollectionViewCell.m */; };
 		8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50F1F4A7AC800DDC445 /* DoubleCollectionViewCell.m */; };
 		8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB5121F4A7DE800DDC445 /* CustomColletionView.m */; };
+		8A4525D61F5A8C59004EB874 /* MBProgressHUD+MyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */; };
 		8A69A1E61F2B0652004F8BD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A1E51F2B0652004F8BD4 /* main.m */; };
 		8A69A1E91F2B0652004F8BD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A1E81F2B0652004F8BD4 /* AppDelegate.m */; };
 		8A69A1F11F2B0652004F8BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A69A1F01F2B0652004F8BD4 /* Assets.xcassets */; };
@@ -62,6 +63,10 @@
 		8A1FB50F1F4A7AC800DDC445 /* DoubleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleCollectionViewCell.m; sourceTree = "<group>"; };
 		8A1FB5111F4A7DE800DDC445 /* CustomColletionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomColletionView.h; sourceTree = "<group>"; };
 		8A1FB5121F4A7DE800DDC445 /* CustomColletionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomColletionView.m; sourceTree = "<group>"; };
+		8A4525D41F5A8C59004EB874 /* MBProgressHUD+MyExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MyExtension.h"; sourceTree = "<group>"; };
+		8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MyExtension.m"; sourceTree = "<group>"; };
+		8A4525D81F5A95C4004EB874 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8A4525D91F5A95D5004EB874 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8A69A1E11F2B0652004F8BD4 /* CustomNavAndTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNavAndTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A69A1E51F2B0652004F8BD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A69A1E71F2B0652004F8BD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +157,8 @@
 			children = (
 				8A69A2231F2B0ACC004F8BD4 /* UIColor+HexRGB.h */,
 				8A69A2241F2B0ACC004F8BD4 /* UIColor+HexRGB.m */,
+				8A4525D41F5A8C59004EB874 /* MBProgressHUD+MyExtension.h */,
+				8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */,
 			);
 			name = "类别";
 			sourceTree = "<group>";
@@ -211,6 +218,20 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		8A4525D71F5A9597004EB874 /* Globle */ = {
+			isa = PBXGroup;
+			children = (
+				8A69A1E71F2B0652004F8BD4 /* AppDelegate.h */,
+				8A69A1E81F2B0652004F8BD4 /* AppDelegate.m */,
+				8A69A1F01F2B0652004F8BD4 /* Assets.xcassets */,
+				8A69A1F21F2B0652004F8BD4 /* LaunchScreen.storyboard */,
+				8A69A1F51F2B0652004F8BD4 /* Info.plist */,
+				8A4525D81F5A95C4004EB874 /* Header.h */,
+				8A4525D91F5A95D5004EB874 /* PrefixHeader.pch */,
+			);
+			name = Globle;
+			sourceTree = "<group>";
+		};
 		8A69A1D81F2B0652004F8BD4 = {
 			isa = PBXGroup;
 			children = (
@@ -238,17 +259,13 @@
 			children = (
 				8A1FB5061F4A6CE900DDC445 /* 皮肤相关 */,
 				8A69A22C1F2B375D004F8BD4 /* CustomTabBar */,
-				8A69A1E71F2B0652004F8BD4 /* AppDelegate.h */,
-				8A69A1E81F2B0652004F8BD4 /* AppDelegate.m */,
+				8A4525D71F5A9597004EB874 /* Globle */,
 				8A1FB5051F4A6CAC00DDC445 /* 类别 */,
 				8A1FB5071F4A6DDE00DDC445 /* 首页 */,
 				8A69A21D1F2B0831004F8BD4 /* ShopCarViewController.h */,
 				8A69A21E1F2B0831004F8BD4 /* ShopCarViewController.m */,
 				8A81E9351F593ED6000A3C8E /* 我的界面 */,
 				8A81E9341F593EBC000A3C8E /* 中间按钮界面 */,
-				8A69A1F01F2B0652004F8BD4 /* Assets.xcassets */,
-				8A69A1F21F2B0652004F8BD4 /* LaunchScreen.storyboard */,
-				8A69A1F51F2B0652004F8BD4 /* Info.plist */,
 				8A69A1E41F2B0652004F8BD4 /* Supporting Files */,
 			);
 			path = CustomNavAndTabBar;
@@ -509,6 +526,7 @@
 				8A69A22B1F2B16EF004F8BD4 /* PushViewController.m in Sources */,
 				8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */,
 				8A69A21F1F2B0831004F8BD4 /* ShopCarViewController.m in Sources */,
+				8A4525D61F5A8C59004EB874 /* MBProgressHUD+MyExtension.m in Sources */,
 				8A69A2251F2B0ACC004F8BD4 /* UIColor+HexRGB.m in Sources */,
 				8AA3B72D1F38448A001E70A7 /* SkinManager.m in Sources */,
 				8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */,
@@ -664,6 +682,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WJ9SVRFBU9;
+				GCC_PREFIX_HEADER = "/Users/suge/Desktop/工作文档/开发相关/自定义中间凸起工具条/CustomNavAndTabBar/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -679,6 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WJ9SVRFBU9;
+				GCC_PREFIX_HEADER = "/Users/suge/Desktop/工作文档/开发相关/自定义中间凸起工具条/CustomNavAndTabBar/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

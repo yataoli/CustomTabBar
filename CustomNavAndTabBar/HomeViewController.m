@@ -40,10 +40,15 @@
     [_moveBtn setBackgroundImage:[UIImage imageNamed:@"商品列表样式2"] forState:UIControlStateNormal];
     [_moveBtn setBackgroundImage:[UIImage imageNamed:@"商品列表样式1"] forState:UIControlStateSelected];
     [self.view addSubview:_moveBtn];
+    
+    
 
 }
 #pragma mark - 更改展示样式
 -(void)changeShowTypeHome:(UIButton *)btn{
+    
+    [MBProgressHUD showTipString:@"哈哈哈哈哈哈哈哈"];
+//    [MBProgressHUD shouHUDWithString:nil];
     
     if (btn.isSelected) {
         btn.selected = NO;
