@@ -10,6 +10,13 @@
 #define Header_h
 #import "UIColor+HexRGB.h"
 #import "MBProgressHUD+MyExtension.h"
+#import "NetworkingManager.h"
+#import <Masonry.h>
+#import "UITextField+Category.h"
+#import "AESCipher/AESCipher.h"
+#import "NSString+Category.h"
+#import <JSONModel.h>
 
+#define passwordKey @"?-oRb7wKsY^@>&sW"
 
 #endif /* Header_h */

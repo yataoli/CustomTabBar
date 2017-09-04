@@ -12,6 +12,14 @@
 		8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50F1F4A7AC800DDC445 /* DoubleCollectionViewCell.m */; };
 		8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB5121F4A7DE800DDC445 /* CustomColletionView.m */; };
 		8A4525D61F5A8C59004EB874 /* MBProgressHUD+MyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */; };
+		8A4525E21F5CE541004EB874 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525E01F5CE540004EB874 /* LoginViewController.m */; };
+		8A4525EA1F5CE956004EB874 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525E91F5CE956004EB874 /* LoginView.m */; };
+		8A4525ED1F5CEC0A004EB874 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525EC1F5CEC0A004EB874 /* UITextField+Category.m */; };
+		8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525EF1F5CF781004EB874 /* LoginViewModel.m */; };
+		8A4525F61F5D0214004EB874 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525F51F5D0213004EB874 /* NSString+Category.m */; };
+		8A4525F71F5D1E4E004EB874 /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525E61F5CE66C004EB874 /* NetworkingManager.m */; };
+		8A4525F81F5D1E5A004EB874 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525F31F5D0135004EB874 /* AESCipher.m */; };
+		8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4525FA1F5D2BFB004EB874 /* MeMessageModel.m */; };
 		8A69A1E61F2B0652004F8BD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A1E51F2B0652004F8BD4 /* main.m */; };
 		8A69A1E91F2B0652004F8BD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69A1E81F2B0652004F8BD4 /* AppDelegate.m */; };
 		8A69A1F11F2B0652004F8BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A69A1F01F2B0652004F8BD4 /* Assets.xcassets */; };
@@ -67,6 +75,22 @@
 		8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MyExtension.m"; sourceTree = "<group>"; };
 		8A4525D81F5A95C4004EB874 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8A4525D91F5A95D5004EB874 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8A4525DF1F5CE540004EB874 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8A4525E01F5CE540004EB874 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8A4525E61F5CE66C004EB874 /* NetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingManager.m; sourceTree = "<group>"; };
+		8A4525E71F5CE66C004EB874 /* NetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingManager.h; sourceTree = "<group>"; };
+		8A4525E81F5CE956004EB874 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		8A4525E91F5CE956004EB874 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		8A4525EB1F5CEC0A004EB874 /* UITextField+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Category.h"; sourceTree = "<group>"; };
+		8A4525EC1F5CEC0A004EB874 /* UITextField+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
+		8A4525EE1F5CF781004EB874 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		8A4525EF1F5CF781004EB874 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		8A4525F21F5D0135004EB874 /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		8A4525F31F5D0135004EB874 /* AESCipher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
+		8A4525F41F5D0213004EB874 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		8A4525F51F5D0213004EB874 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		8A4525F91F5D2BFB004EB874 /* MeMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeMessageModel.h; sourceTree = "<group>"; };
+		8A4525FA1F5D2BFB004EB874 /* MeMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeMessageModel.m; sourceTree = "<group>"; };
 		8A69A1E11F2B0652004F8BD4 /* CustomNavAndTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNavAndTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A69A1E51F2B0652004F8BD4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A69A1E71F2B0652004F8BD4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,6 +179,10 @@
 		8A1FB5051F4A6CAC00DDC445 /* 类别 */ = {
 			isa = PBXGroup;
 			children = (
+				8A4525F41F5D0213004EB874 /* NSString+Category.h */,
+				8A4525F51F5D0213004EB874 /* NSString+Category.m */,
+				8A4525EB1F5CEC0A004EB874 /* UITextField+Category.h */,
+				8A4525EC1F5CEC0A004EB874 /* UITextField+Category.m */,
 				8A69A2231F2B0ACC004F8BD4 /* UIColor+HexRGB.h */,
 				8A69A2241F2B0ACC004F8BD4 /* UIColor+HexRGB.m */,
 				8A4525D41F5A8C59004EB874 /* MBProgressHUD+MyExtension.h */,
@@ -232,6 +260,71 @@
 			name = Globle;
 			sourceTree = "<group>";
 		};
+		8A4525DA1F5CE4E2004EB874 /* MVVM登录 */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525DE1F5CE51C004EB874 /* ViewModel */,
+				8A4525DD1F5CE510004EB874 /* Controller */,
+				8A4525DC1F5CE509004EB874 /* View */,
+				8A4525DB1F5CE4F9004EB874 /* Model */,
+			);
+			name = "MVVM登录";
+			sourceTree = "<group>";
+		};
+		8A4525DB1F5CE4F9004EB874 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525F91F5D2BFB004EB874 /* MeMessageModel.h */,
+				8A4525FA1F5D2BFB004EB874 /* MeMessageModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8A4525DC1F5CE509004EB874 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525E81F5CE956004EB874 /* LoginView.h */,
+				8A4525E91F5CE956004EB874 /* LoginView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8A4525DD1F5CE510004EB874 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525DF1F5CE540004EB874 /* LoginViewController.h */,
+				8A4525E01F5CE540004EB874 /* LoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8A4525DE1F5CE51C004EB874 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525EE1F5CF781004EB874 /* LoginViewModel.h */,
+				8A4525EF1F5CF781004EB874 /* LoginViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		8A4525E51F5CE64D004EB874 /* 网络工具 */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525E71F5CE66C004EB874 /* NetworkingManager.h */,
+				8A4525E61F5CE66C004EB874 /* NetworkingManager.m */,
+			);
+			name = "网络工具";
+			sourceTree = "<group>";
+		};
+		8A4525F11F5D0135004EB874 /* AESCipher */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525F21F5D0135004EB874 /* AESCipher.h */,
+				8A4525F31F5D0135004EB874 /* AESCipher.m */,
+			);
+			path = AESCipher;
+			sourceTree = "<group>";
+		};
 		8A69A1D81F2B0652004F8BD4 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +350,8 @@
 		8A69A1E31F2B0652004F8BD4 /* CustomNavAndTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				8A4525F11F5D0135004EB874 /* AESCipher */,
+				8A4525E51F5CE64D004EB874 /* 网络工具 */,
 				8A1FB5061F4A6CE900DDC445 /* 皮肤相关 */,
 				8A69A22C1F2B375D004F8BD4 /* CustomTabBar */,
 				8A4525D71F5A9597004EB874 /* Globle */,
@@ -322,6 +417,7 @@
 		8A81E9351F593ED6000A3C8E /* 我的界面 */ = {
 			isa = PBXGroup;
 			children = (
+				8A4525DA1F5CE4E2004EB874 /* MVVM登录 */,
 				8A69A2201F2B084D004F8BD4 /* MeViewController.h */,
 				8A69A2211F2B084D004F8BD4 /* MeViewController.m */,
 				8A81E9361F593F4E000A3C8E /* GeRenMessageViewController.h */,
@@ -521,6 +617,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4525F81F5D1E5A004EB874 /* AESCipher.m in Sources */,
+				8A4525F71F5D1E4E004EB874 /* NetworkingManager.m in Sources */,
 				8A69A2221F2B084D004F8BD4 /* MeViewController.m in Sources */,
 				8A69A1E91F2B0652004F8BD4 /* AppDelegate.m in Sources */,
 				8A69A22B1F2B16EF004F8BD4 /* PushViewController.m in Sources */,
@@ -532,11 +630,17 @@
 				8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */,
 				8A69A2191F2B07C2004F8BD4 /* BaseTabBarController.m in Sources */,
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
+				8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
+				8A4525ED1F5CEC0A004EB874 /* UITextField+Category.m in Sources */,
 				8A81E9381F593F4F000A3C8E /* GeRenMessageViewController.m in Sources */,
+				8A4525E21F5CE541004EB874 /* LoginViewController.m in Sources */,
+				8A4525EA1F5CE956004EB874 /* LoginView.m in Sources */,
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
+				8A4525F61F5D0214004EB874 /* NSString+Category.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
+				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
 				8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
