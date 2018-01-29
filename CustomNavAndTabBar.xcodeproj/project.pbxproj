@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177B9B63201EEA7E0095B301 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B60201EEA7D0095B301 /* MBProgressHUD.m */; };
+		177B9B73201EEFED0095B301 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B66201EEFEC0095B301 /* error.png */; };
+		177B9B74201EEFED0095B301 /* nonetwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B67201EEFEC0095B301 /* nonetwork.png */; };
+		177B9B75201EEFED0095B301 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B69201EEFEC0095B301 /* Reachability.m */; };
+		177B9B76201EEFED0095B301 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B6A201EEFEC0095B301 /* success.png */; };
+		177B9B77201EEFED0095B301 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B6C201EEFEC0095B301 /* UIColor+Hexadecimal.m */; };
+		177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B6E201EEFEC0095B301 /* YTAlertView.m */; };
+		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
+		177B9B7A201EEFED0095B301 /* YTNetWorkStateMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */; };
+		177B9B7F201EF06A0095B301 /* LYUpdateVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */; };
+		177B9B83201EF0C80095B301 /* XSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* XSInfoView.m */; };
 		8940AECD17ADB28C6CD7A416 /* libPods-CustomNavAndTabBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087859C2768C35DE7C0D050D /* libPods-CustomNavAndTabBar.a */; };
 		8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50C1F4A735F00DDC445 /* SingleCollectionViewCell.m */; };
 		8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50F1F4A7AC800DDC445 /* DoubleCollectionViewCell.m */; };
@@ -63,6 +74,26 @@
 
 /* Begin PBXFileReference section */
 		087859C2768C35DE7C0D050D /* libPods-CustomNavAndTabBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomNavAndTabBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		177B9B5F201EEA7D0095B301 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		177B9B60201EEA7D0095B301 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		177B9B66201EEFEC0095B301 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		177B9B67201EEFEC0095B301 /* nonetwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nonetwork.png; sourceTree = "<group>"; };
+		177B9B68201EEFEC0095B301 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		177B9B69201EEFEC0095B301 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		177B9B6A201EEFEC0095B301 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		177B9B6B201EEFEC0095B301 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
+		177B9B6C201EEFEC0095B301 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
+		177B9B6D201EEFEC0095B301 /* YTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAlertView.h; sourceTree = "<group>"; };
+		177B9B6E201EEFEC0095B301 /* YTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAlertView.m; sourceTree = "<group>"; };
+		177B9B6F201EEFEC0095B301 /* YTAlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAlertViewManager.h; sourceTree = "<group>"; };
+		177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAlertViewManager.m; sourceTree = "<group>"; };
+		177B9B71201EEFEC0095B301 /* YTNetWorkStateMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetWorkStateMonitor.h; sourceTree = "<group>"; };
+		177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetWorkStateMonitor.m; sourceTree = "<group>"; };
+		177B9B7B201EF04A0095B301 /* YTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHeader.h; sourceTree = "<group>"; };
+		177B9B7D201EF06A0095B301 /* LYUpdateVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUpdateVersion.h; sourceTree = "<group>"; };
+		177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUpdateVersion.m; sourceTree = "<group>"; };
+		177B9B81201EF0C80095B301 /* XSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSInfoView.m; sourceTree = "<group>"; };
+		177B9B82201EF0C80095B301 /* XSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSInfoView.h; sourceTree = "<group>"; };
 		327522932C1833A8D8310FBF /* Pods-CustomNavAndTabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavAndTabBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomNavAndTabBar/Pods-CustomNavAndTabBar.debug.xcconfig"; sourceTree = "<group>"; };
 		365155CC5532D24D9F404552 /* Pods-CustomNavAndTabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavAndTabBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomNavAndTabBar/Pods-CustomNavAndTabBar.release.xcconfig"; sourceTree = "<group>"; };
 		8A1FB50B1F4A735F00DDC445 /* SingleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCollectionViewCell.h; sourceTree = "<group>"; };
@@ -159,6 +190,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177B9B5D201EEA7D0095B301 /* MBProgressHUD（扩展） */ = {
+			isa = PBXGroup;
+			children = (
+				8A4525D41F5A8C59004EB874 /* MBProgressHUD+MyExtension.h */,
+				8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */,
+				177B9B5F201EEA7D0095B301 /* MBProgressHUD.h */,
+				177B9B60201EEA7D0095B301 /* MBProgressHUD.m */,
+			);
+			path = "MBProgressHUD（扩展）";
+			sourceTree = "<group>";
+		};
+		177B9B65201EEFEC0095B301 /* YTAlertView(仿QQ顶部提示框) */ = {
+			isa = PBXGroup;
+			children = (
+				177B9B66201EEFEC0095B301 /* error.png */,
+				177B9B67201EEFEC0095B301 /* nonetwork.png */,
+				177B9B68201EEFEC0095B301 /* Reachability.h */,
+				177B9B69201EEFEC0095B301 /* Reachability.m */,
+				177B9B6A201EEFEC0095B301 /* success.png */,
+				177B9B6B201EEFEC0095B301 /* UIColor+Hexadecimal.h */,
+				177B9B6C201EEFEC0095B301 /* UIColor+Hexadecimal.m */,
+				177B9B6D201EEFEC0095B301 /* YTAlertView.h */,
+				177B9B6E201EEFEC0095B301 /* YTAlertView.m */,
+				177B9B6F201EEFEC0095B301 /* YTAlertViewManager.h */,
+				177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */,
+				177B9B71201EEFEC0095B301 /* YTNetWorkStateMonitor.h */,
+				177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */,
+			);
+			path = "YTAlertView(仿QQ顶部提示框)";
+			sourceTree = "<group>";
+		};
+		177B9B7C201EF06A0095B301 /* CheckVersion */ = {
+			isa = PBXGroup;
+			children = (
+				177B9B7D201EF06A0095B301 /* LYUpdateVersion.h */,
+				177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */,
+			);
+			path = CheckVersion;
+			sourceTree = "<group>";
+		};
+		177B9B80201EF0BB0095B301 /* 文字提示框 */ = {
+			isa = PBXGroup;
+			children = (
+				177B9B82201EF0C80095B301 /* XSInfoView.h */,
+				177B9B81201EF0C80095B301 /* XSInfoView.m */,
+			);
+			path = "文字提示框";
+			sourceTree = "<group>";
+		};
 		178E4208E9B83FA6A862E4FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +265,6 @@
 				8A4525EC1F5CEC0A004EB874 /* UITextField+Category.m */,
 				8A69A2231F2B0ACC004F8BD4 /* UIColor+HexRGB.h */,
 				8A69A2241F2B0ACC004F8BD4 /* UIColor+HexRGB.m */,
-				8A4525D41F5A8C59004EB874 /* MBProgressHUD+MyExtension.h */,
-				8A4525D51F5A8C59004EB874 /* MBProgressHUD+MyExtension.m */,
 			);
 			name = "类别";
 			sourceTree = "<group>";
@@ -254,6 +332,7 @@
 				8A69A1F01F2B0652004F8BD4 /* Assets.xcassets */,
 				8A69A1F21F2B0652004F8BD4 /* LaunchScreen.storyboard */,
 				8A69A1F51F2B0652004F8BD4 /* Info.plist */,
+				177B9B7B201EF04A0095B301 /* YTHeader.h */,
 				8A4525D81F5A95C4004EB874 /* Header.h */,
 				8A4525D91F5A95D5004EB874 /* PrefixHeader.pch */,
 			);
@@ -350,6 +429,10 @@
 		8A69A1E31F2B0652004F8BD4 /* CustomNavAndTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				177B9B80201EF0BB0095B301 /* 文字提示框 */,
+				177B9B7C201EF06A0095B301 /* CheckVersion */,
+				177B9B65201EEFEC0095B301 /* YTAlertView(仿QQ顶部提示框) */,
+				177B9B5D201EEA7D0095B301 /* MBProgressHUD（扩展） */,
 				8A4525F11F5D0135004EB874 /* AESCipher */,
 				8A4525E51F5CE64D004EB874 /* 网络工具 */,
 				8A1FB5061F4A6CE900DDC445 /* 皮肤相关 */,
@@ -496,7 +579,7 @@
 				TargetAttributes = {
 					8A69A1E01F2B0652004F8BD4 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = WJ9SVRFBU9;
+						DevelopmentTeam = U63U66XAN7;
 						ProvisioningStyle = Automatic;
 					};
 					8A69A1F91F2B0653004F8BD4 = {
@@ -540,10 +623,13 @@
 			files = (
 				8AA3B7321F384D2C001E70A7 /* 1098.bundle in Resources */,
 				8AA3B7351F384D2C001E70A7 /* 1111.bundle in Resources */,
+				177B9B74201EEFED0095B301 /* nonetwork.png in Resources */,
 				8AA3B7331F384D2C001E70A7 /* 1108.bundle in Resources */,
 				8AA3B7371F384D3F001E70A7 /* 1114.bundle in Resources */,
 				8A69A1F41F2B0652004F8BD4 /* LaunchScreen.storyboard in Resources */,
 				8AA3B7341F384D2C001E70A7 /* 1110.bundle in Resources */,
+				177B9B76201EEFED0095B301 /* success.png in Resources */,
+				177B9B73201EEFED0095B301 /* error.png in Resources */,
 				8A69A1F11F2B0652004F8BD4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,13 +657,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomNavAndTabBar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73BCD1ECAB53A5C214BE49F9 /* [CP] Copy Pods Resources */ = {
@@ -621,16 +710,21 @@
 				8A4525F71F5D1E4E004EB874 /* NetworkingManager.m in Sources */,
 				8A69A2221F2B084D004F8BD4 /* MeViewController.m in Sources */,
 				8A69A1E91F2B0652004F8BD4 /* AppDelegate.m in Sources */,
+				177B9B7A201EEFED0095B301 /* YTNetWorkStateMonitor.m in Sources */,
 				8A69A22B1F2B16EF004F8BD4 /* PushViewController.m in Sources */,
 				8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */,
 				8A69A21F1F2B0831004F8BD4 /* ShopCarViewController.m in Sources */,
 				8A4525D61F5A8C59004EB874 /* MBProgressHUD+MyExtension.m in Sources */,
+				177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */,
 				8A69A2251F2B0ACC004F8BD4 /* UIColor+HexRGB.m in Sources */,
+				177B9B63201EEA7E0095B301 /* MBProgressHUD.m in Sources */,
 				8AA3B72D1F38448A001E70A7 /* SkinManager.m in Sources */,
 				8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */,
 				8A69A2191F2B07C2004F8BD4 /* BaseTabBarController.m in Sources */,
+				177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */,
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
 				8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */,
+				177B9B83201EF0C80095B301 /* XSInfoView.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
 				8A4525ED1F5CEC0A004EB874 /* UITextField+Category.m in Sources */,
@@ -639,8 +733,11 @@
 				8A4525EA1F5CE956004EB874 /* LoginView.m in Sources */,
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
 				8A4525F61F5D0214004EB874 /* NSString+Category.m in Sources */,
+				177B9B7F201EF06A0095B301 /* LYUpdateVersion.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
 				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
+				177B9B77201EEFED0095B301 /* UIColor+Hexadecimal.m in Sources */,
+				177B9B75201EEFED0095B301 /* Reachability.m in Sources */,
 				8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -785,8 +882,8 @@
 			baseConfigurationReference = 327522932C1833A8D8310FBF /* Pods-CustomNavAndTabBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WJ9SVRFBU9;
-				GCC_PREFIX_HEADER = "/Users/suge/Desktop/工作文档/开发相关/自定义中间凸起工具条/CustomNavAndTabBar/PrefixHeader.pch";
+				DEVELOPMENT_TEAM = U63U66XAN7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomNavAndTabBar/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -801,8 +898,8 @@
 			baseConfigurationReference = 365155CC5532D24D9F404552 /* Pods-CustomNavAndTabBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WJ9SVRFBU9;
-				GCC_PREFIX_HEADER = "/Users/suge/Desktop/工作文档/开发相关/自定义中间凸起工具条/CustomNavAndTabBar/PrefixHeader.pch";
+				DEVELOPMENT_TEAM = U63U66XAN7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomNavAndTabBar/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -45,32 +45,13 @@
     [self hideHUDOnView:view];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = isAutoHide == YES ? MBProgressHUDModeText : MBProgressHUDModeIndeterminate;
-    hud.label.textColor = [UIColor whiteColor];
-    hud.contentColor = [UIColor whiteColor];
-    //方块颜色为黑色半透明颜色
-    hud.bezelView.color = [UIColor colorWithRed:(0)/255.0 green:(0)/255.0 blue:(0)/255.0 alpha:0.6f];
-    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.label.text = string;
+    hud.labelText = string;
     if (isAutoHide == YES) {
-        [hud hideAnimated:YES afterDelay:1.5f];
+        [hud hide:YES afterDelay:1.5];
     }
     return hud;
 }
-/*
-#pragma mark - 获取将要显示的view
-+ (UIView *)getWillShowViewWithSourceView:(UIView *)sourceView{
-    if (sourceView) {
-        return sourceView;
-    }else{
-        sourceView = [[UIApplication sharedApplication].delegate window];
-        if (!sourceView) {
-            sourceView = [[[UIApplication sharedApplication] windows] lastObject];
-        }
-        return sourceView;
-    }
-    
-}
-*/
+
 #pragma mark - 获取当前显示的view
 + (UIView *)getWillShowViewWithSourceView:(UIView *)sourceView{
     //如果传的有view直接返回

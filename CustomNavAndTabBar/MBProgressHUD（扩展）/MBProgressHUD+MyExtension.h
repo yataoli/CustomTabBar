@@ -5,8 +5,7 @@
 //  Created by suge on 2017/9/2.
 //  Copyright © 2017年 郑州鹿客互联网科技有限公司. All rights reserved.
 //
-
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 
 @interface MBProgressHUD (MyExtension)
 /**显示提示文字（1.5秒后消失）*/
