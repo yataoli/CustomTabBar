@@ -16,7 +16,7 @@
 #import "AESCipher/AESCipher.h"
 #import "NSString+Category.h"
 #import <JSONModel.h>
-#import "XSInfoView.h"
+#import "YTInfoView.h"
 
 #define passwordKey @"?-oRb7wKsY^@>&sW"
 

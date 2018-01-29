@@ -37,7 +37,7 @@
 
 - (void)loginButtonClick:(UIButton *)button{
     if (_loginView.accountTextField.text.length <= 0 || _loginView.passwordTextField.text.length <= 0) {
-        [XSInfoView showInfo:@"账号或者密码不能为空" onView:self];
+        [YTInfoView showInfo:@"账号或者密码不能为空" onView:self];
         return;
     }
     [MBProgressHUD shouHUDWithString:nil];

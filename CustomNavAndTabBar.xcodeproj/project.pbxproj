@@ -17,7 +17,7 @@
 		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
 		177B9B7A201EEFED0095B301 /* YTNetWorkStateMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */; };
 		177B9B7F201EF06A0095B301 /* LYUpdateVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */; };
-		177B9B83201EF0C80095B301 /* XSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* XSInfoView.m */; };
+		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
 		8940AECD17ADB28C6CD7A416 /* libPods-CustomNavAndTabBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087859C2768C35DE7C0D050D /* libPods-CustomNavAndTabBar.a */; };
 		8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50C1F4A735F00DDC445 /* SingleCollectionViewCell.m */; };
 		8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50F1F4A7AC800DDC445 /* DoubleCollectionViewCell.m */; };
@@ -92,8 +92,8 @@
 		177B9B7B201EF04A0095B301 /* YTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHeader.h; sourceTree = "<group>"; };
 		177B9B7D201EF06A0095B301 /* LYUpdateVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUpdateVersion.h; sourceTree = "<group>"; };
 		177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUpdateVersion.m; sourceTree = "<group>"; };
-		177B9B81201EF0C80095B301 /* XSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSInfoView.m; sourceTree = "<group>"; };
-		177B9B82201EF0C80095B301 /* XSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSInfoView.h; sourceTree = "<group>"; };
+		177B9B81201EF0C80095B301 /* YTInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTInfoView.m; sourceTree = "<group>"; };
+		177B9B82201EF0C80095B301 /* YTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTInfoView.h; sourceTree = "<group>"; };
 		327522932C1833A8D8310FBF /* Pods-CustomNavAndTabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavAndTabBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomNavAndTabBar/Pods-CustomNavAndTabBar.debug.xcconfig"; sourceTree = "<group>"; };
 		365155CC5532D24D9F404552 /* Pods-CustomNavAndTabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavAndTabBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomNavAndTabBar/Pods-CustomNavAndTabBar.release.xcconfig"; sourceTree = "<group>"; };
 		8A1FB50B1F4A735F00DDC445 /* SingleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCollectionViewCell.h; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 		177B9B80201EF0BB0095B301 /* 文字提示框 */ = {
 			isa = PBXGroup;
 			children = (
-				177B9B82201EF0C80095B301 /* XSInfoView.h */,
-				177B9B81201EF0C80095B301 /* XSInfoView.m */,
+				177B9B82201EF0C80095B301 /* YTInfoView.h */,
+				177B9B81201EF0C80095B301 /* YTInfoView.m */,
 			);
 			path = "文字提示框";
 			sourceTree = "<group>";
@@ -724,7 +724,7 @@
 				177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */,
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
 				8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */,
-				177B9B83201EF0C80095B301 /* XSInfoView.m in Sources */,
+				177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
 				8A4525ED1F5CEC0A004EB874 /* UITextField+Category.m in Sources */,

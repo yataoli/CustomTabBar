@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, XSInfoViewLayoutStyle) {
 
 @end
 
-@interface XSInfoView : UIView
+@interface YTInfoView : UIView
 
 @property (strong, nonatomic) UILabel *infoLabel;
 @property (strong, nonatomic) UIImageView *infoImageView;

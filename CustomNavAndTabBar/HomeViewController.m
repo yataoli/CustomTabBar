@@ -47,7 +47,7 @@
 #pragma mark - 更改展示样式
 -(void)changeShowTypeHome:(UIButton *)btn{
     
-    [XSInfoView showInfo:@"切换成功" onView:self];
+    [YTInfoView showInfo:@"切换成功" onView:self];
     
     if (btn.isSelected) {
         btn.selected = NO;

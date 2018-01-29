@@ -6,11 +6,11 @@
 //  Copyright © 2016年 李文强. All rights reserved.
 //
 
-#import "XSInfoView.h"
+#import "YTInfoView.h"
 
-@interface XSInfoView()
+@interface YTInfoView()
 {
-    XSInfoView *_infoView;
+    YTInfoView *_infoView;
 }
 
 @end
@@ -37,16 +37,16 @@
 
 @end
 
-@interface XSInfoView ()
+@interface YTInfoView ()
 @property (strong, nonatomic) XSInfoViewStyle *style;
 @end
 
-@implementation XSInfoView
+@implementation YTInfoView
 - (void)showView:(NSString *)info onView:(UIViewController *)superView
 {
     XSInfoViewStyle *style = [[XSInfoViewStyle alloc] init];
     style.info = [NSString stringWithFormat:@"%@",info];
-    _infoView = [[XSInfoView alloc] initWithStyle:style];
+    _infoView = [[YTInfoView alloc] initWithStyle:style];
     [_infoView sizeToFit];
     [superView.view addSubview:_infoView];
     [superView.view bringSubviewToFront:_infoView];
@@ -61,24 +61,24 @@
 + (void)showInfo:(NSString *)info onView:(UIViewController *)superView {
     XSInfoViewStyle *style = [[XSInfoViewStyle alloc] init];
     style.info = [NSString stringWithFormat:@"%@",info];
-    XSInfoView *infoView = [[XSInfoView alloc] initWithStyle:style];
+    YTInfoView *infoView = [[YTInfoView alloc] initWithStyle:style];
     [infoView sizeToFit];
     [superView.view addSubview:infoView];
     [superView.view bringSubviewToFront:infoView];
     style.homeVC = superView;
     infoView.myVC = superView;
     [infoView addCenterCons];
-    [XSInfoView countDown:style.durationSeconds dimissView:infoView];
+    [YTInfoView countDown:style.durationSeconds dimissView:infoView];
 }
 
 + (void)showInfoWithStyle:(XSInfoViewStyle *)style onView:(UIView *)superView {
-    XSInfoView *infoView = [[XSInfoView alloc] initWithStyle:style];
+    YTInfoView *infoView = [[YTInfoView alloc] initWithStyle:style];
     [infoView sizeToFit];
     
     [superView addSubview:infoView];
     [superView bringSubviewToFront:infoView];
     [infoView addCenterCons];
-    [XSInfoView countDown:style.durationSeconds dimissView:infoView];
+    [YTInfoView countDown:style.durationSeconds dimissView:infoView];
 }
 
 + (void)countDown:(double)duration dimissView:(UIView *)view {
