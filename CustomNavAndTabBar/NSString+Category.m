@@ -265,6 +265,16 @@
     
     return dateStr;
 }
-
+//把指定时间戳（秒）转化为指定格式
++ (NSString *)getTime:(NSString *)getTimeStr withFormate:(NSString *)timeFormate
+{
+    NSDateFormatter * dateFormater = [NSDateFormatter new];
+    //    [dateFormater setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [dateFormater setDateFormat:timeFormate];
+    NSDate * confirmDate = [NSDate dateWithTimeIntervalSince1970:[getTimeStr integerValue]];
+    NSString * myString = [dateFormater stringFromDate:confirmDate];
+    
+    return myString;
+}
 
 @end

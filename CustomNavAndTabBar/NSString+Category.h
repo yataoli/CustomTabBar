@@ -40,6 +40,10 @@
 //把指定时间转化为时间戳
 + (NSString *)getTimeIntervalWithDate:(NSDate *)date;
 
+//把指定时间戳（秒）转化为指定格式 （yyyy-MM-dd HH:mm）
++ (NSString *)getTime:(NSString *)getTimeStr withFormate:(NSString *)timeFormate;
+
+
 /**获取设备型号*/
 + (NSString*)deviceVersion;
 
