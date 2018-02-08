@@ -40,10 +40,11 @@
         [YTInfoView showInfo:@"账号或者密码不能为空" onView:self];
         return;
     }
-    [MBProgressHUD shouHUDWithString:nil];
+    [MBProgressHUD shouHUDWithStr:nil atView:self.view];
     [self.viewModel loginSuccess:^(id json) {
 //        NSLog(@"登录数据===%@",json);
-        [MBProgressHUD showTipString:@"登录成功"];
+        [MBProgressHUD hiddenHUD];
+        [YTInfoView showInfo:@"登录成功" onView:self];
         NSLog(@"----%@",@(_viewModel.dataSource.count));
     } fail:^(NSError *error) {
         NSLog(@"error===%@",error);

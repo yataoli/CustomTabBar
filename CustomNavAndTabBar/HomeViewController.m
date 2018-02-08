@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "CustomColletionView.h"
+
 #define ScreenBounds [UIScreen mainScreen].bounds
 #define ScreenWidth ScreenBounds.size.width
 #define ScreenHeight ScreenBounds.size.height
@@ -24,6 +25,44 @@
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor redColor];
     [self createUI];
+    /*
+    self.collectionView.mj_header = [YT_MJRefreshHeader headerWithRefreshingBlock:^{
+        NSLog(@"++++++");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+            [self.collectionView.mj_footer endRefreshing];
+        });
+    }];
+    [self.collectionView.mj_header beginRefreshing];
+    
+    self.collectionView.mj_footer = [YT_MJRefreshFooter footerWithRefreshingBlock:^{
+        NSLog(@"------");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+        });
+    }];
+    */
+    self.collectionView.mj_header = [YT_MJRefreshGifHeader headerWithRefreshingBlock:^{
+        NSLog(@"----gif-----");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_header endRefreshing];
+            
+            
+        });
+    }];
+
+    
+    self.collectionView.mj_footer = [YT_MJRefreshAutoGifFooter footerWithRefreshingBlock:^{
+        NSLog(@"++++gif++++");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+            
+            
+        });
+    }];
+    
+    
 }
 - (void)createUI{
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];

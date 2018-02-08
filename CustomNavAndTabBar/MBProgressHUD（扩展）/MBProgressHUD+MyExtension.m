@@ -7,24 +7,13 @@
 //
 
 #import "MBProgressHUD+MyExtension.h"
-
+static UIView *currentView = nil;
 @implementation MBProgressHUD (MyExtension)
-/**显示提示文字（1.5秒后消失）*/
-+ (MBProgressHUD *)showTipString:(NSString *)string{
-    return [self showTipString:string addToView:nil];
-}
-/**指定view上添加提示文字（1.5秒后消失）*/
-+ (MBProgressHUD *)showTipString:(NSString *)string addToView:(UIView *)view{
-    return [self showHUDWithTipStr:string addToView:view isAutomaticHide:YES];
-}
 
-/**显示hud*/
-+ (MBProgressHUD *)shouHUDWithString:(NSString *)string{
-    return [self showHUDWithTipStr:string addToView:[self getWillShowViewWithSourceView:nil] isAutomaticHide:NO];
-}
 
 /**在指定view上显示hud*/
-+ (MBProgressHUD *)shouHUDWithString:(NSString *)string addToView:(UIView *)view{
++ (MBProgressHUD *)shouHUDWithStr:(NSString *)string atView:(UIView *)view{
+    currentView = view;
     return [self showHUDWithTipStr:string addToView:[self getWillShowViewWithSourceView:view] isAutomaticHide:NO];
 }
 
@@ -32,15 +21,15 @@
 
 /**隐藏hud*/
 + (void)hiddenHUD{
-    [self hideHUDOnView:nil];
+    [self hideHUDOnView:currentView];
 }
 
 /**隐藏hud*/
 + (void)hideHUDOnView:(UIView *)view{
-    [self hideHUDForView:[self getWillShowViewWithSourceView:view] animated:YES];
+    [self hideHUDForView:view animated:YES];
 }
 + (instancetype)showHUDWithTipStr:(NSString *)string addToView:(UIView *)view isAutomaticHide:(BOOL)isAutoHide{
-    view = [self getWillShowViewWithSourceView:view];
+//    view = [self getWillShowViewWithSourceView:view];
     //show之前先hide之前的
     [self hideHUDOnView:view];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
