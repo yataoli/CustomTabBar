@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		170A8839202AE51100F42292 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 170A8837202AE51100F42292 /* UIView+Extension.m */; };
+		1718B3B4202E90F10084150C /* SaveAndReadFileAtSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718B3B3202E90F10084150C /* SaveAndReadFileAtSandbox.m */; };
 		177B9B63201EEA7E0095B301 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B60201EEA7D0095B301 /* MBProgressHUD.m */; };
 		177B9B73201EEFED0095B301 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B66201EEFEC0095B301 /* error.png */; };
 		177B9B74201EEFED0095B301 /* nonetwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B67201EEFEC0095B301 /* nonetwork.png */; };
@@ -164,6 +165,8 @@
 		087859C2768C35DE7C0D050D /* libPods-CustomNavAndTabBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomNavAndTabBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		170A8837202AE51100F42292 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		170A8838202AE51100F42292 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		1718B3B2202E90F10084150C /* SaveAndReadFileAtSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveAndReadFileAtSandbox.h; sourceTree = "<group>"; };
+		1718B3B3202E90F10084150C /* SaveAndReadFileAtSandbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveAndReadFileAtSandbox.m; sourceTree = "<group>"; };
 		177B9B5F201EEA7D0095B301 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		177B9B60201EEA7D0095B301 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		177B9B66201EEFEC0095B301 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
@@ -391,6 +394,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1718B3B1202E90850084150C /* 保存文件到沙盒 */ = {
+			isa = PBXGroup;
+			children = (
+				1718B3B2202E90F10084150C /* SaveAndReadFileAtSandbox.h */,
+				1718B3B3202E90F10084150C /* SaveAndReadFileAtSandbox.m */,
+			);
+			path = "保存文件到沙盒";
+			sourceTree = "<group>";
+		};
 		177B9B5D201EEA7D0095B301 /* MBProgressHUD（扩展） */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +463,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1718B3B1202E90850084150C /* 保存文件到沙盒 */,
 				17C117FA202C1D7300C4629B /* MJRefresh(扩展) */,
 				177B9B80201EF0BB0095B301 /* 文字提示框 */,
 				177B9B7C201EF06A0095B301 /* CheckVersion(版本更新检查) */,
@@ -1193,6 +1206,7 @@
 				8A69A2191F2B07C2004F8BD4 /* BaseTabBarController.m in Sources */,
 				17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */,
 				177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */,
+				1718B3B4202E90F10084150C /* SaveAndReadFileAtSandbox.m in Sources */,
 				17C11839202C1D7400C4629B /* MJRefreshConst.m in Sources */,
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
 				8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */,
