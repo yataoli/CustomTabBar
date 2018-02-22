@@ -17,6 +17,7 @@
 #import "NSString+Category.h"
 #import <JSONModel.h>
 #import "YTInfoView.h"
+#import "YT_CenterButton.h"
 
 #define passwordKey @"?-oRb7wKsY^@>&sW"
 

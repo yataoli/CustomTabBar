@@ -63,8 +63,7 @@
             
         });
     }];
-    
-    
+ 
 }
 - (void)createUI{
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
