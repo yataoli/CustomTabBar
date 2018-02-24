@@ -40,11 +40,9 @@
     manager.timeoutInterval = 30;
     
     manager.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"text/html",@"application/json", nil];
-    
 
-    
     // 配置自建证书的Https请求
-    //        [self ba_setupSecurityPolicy];
+    [self ba_setupSecurityPolicy];
 }
 
 /**
@@ -64,9 +62,7 @@
         securityPolicy.allowInvalidCertificates = YES;
         securityPolicy.validatesDomainName = NO;
         [NetworkingManager shareManager].sessionManager.securityPolicy = securityPolicy;
-    }
-    else
-    {
+    }else{
         /*! 自定义的CA证书配置如下： */
         /*! 自定义security policy, 先前确保你的自定义CA证书已放入工程Bundle */
         /*!

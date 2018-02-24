@@ -39,7 +39,7 @@ typedef NS_ENUM(NSUInteger,HttpResponseSerializer) {
 typedef void(^HttpRequetSuccess)(id responseObject);
 
 /**请求失败回调block*/
-typedef void(^HttpRequesError)(NSError *reeor);
+typedef void(^HttpRequesError)(NSError *error);
 
 
 
