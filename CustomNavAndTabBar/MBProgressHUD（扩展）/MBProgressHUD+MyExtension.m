@@ -14,7 +14,12 @@ static UIView *currentView = nil;
 /**在指定view上显示hud*/
 + (MBProgressHUD *)shouHUDWithStr:(NSString *)string atView:(UIView *)view{
     currentView = view;
-    return [self showHUDWithTipStr:string addToView:[self getWillShowViewWithSourceView:view] isAutomaticHide:NO];
+    [self hideHUDOnView:view];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.labelText = string;
+    return hud;
+
+//    return [self showHUDWithTipStr:string addToView:[self getWillShowViewWithSourceView:view] isAutomaticHide:NO];
 }
 
 
