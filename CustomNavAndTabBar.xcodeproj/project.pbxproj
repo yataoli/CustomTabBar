@@ -409,13 +409,13 @@
 			path = "保存文件到沙盒";
 			sourceTree = "<group>";
 		};
-		17688D84205A6B8B002427F8 /* 计算类 */ = {
+		17688D84205A6B8B002427F8 /* 精确计算类 */ = {
 			isa = PBXGroup;
 			children = (
 				17688D85205A6B8B002427F8 /* YT_Compute_Object.h */,
 				17688D86205A6B8B002427F8 /* YT_Compute_Object.m */,
 			);
-			path = "计算类";
+			path = "精确计算类";
 			sourceTree = "<group>";
 		};
 		177B9B5D201EEA7D0095B301 /* MBProgressHUD（扩展） */ = {
@@ -487,7 +487,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				17688D84205A6B8B002427F8 /* 计算类 */,
+				17688D84205A6B8B002427F8 /* 精确计算类 */,
 				17BFB6E2203EA58500FD395C /* 图文上下居中button */,
 				1718B3B1202E90850084150C /* 保存文件到沙盒 */,
 				17C117FA202C1D7300C4629B /* MJRefresh(扩展) */,
