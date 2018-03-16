@@ -491,7 +491,7 @@
 				17688D84205A6B8B002427F8 /* 精确计算类 */,
 				17BFB6E2203EA58500FD395C /* 图文上下居中button */,
 				1718B3B1202E90850084150C /* 保存文件到沙盒 */,
-				17C117FA202C1D7300C4629B /* MJRefresh(扩展) */,
+				17C117FA202C1D7300C4629B /* YT_MJRefresh */,
 				177B9B80201EF0BB0095B301 /* 文字提示框 */,
 				177B9B7C201EF06A0095B301 /* CheckVersion(版本更新检查) */,
 				177B9B65201EEFEC0095B301 /* YTAlertView(仿QQ顶部提示框) */,
@@ -504,7 +504,7 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
-		17C117FA202C1D7300C4629B /* MJRefresh(扩展) */ = {
+		17C117FA202C1D7300C4629B /* YT_MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
 				17C11847202C235400C4629B /* MJGIFGroup */,
@@ -519,7 +519,7 @@
 				17C118C7202C24E100C4629B /* YT_MJRefreshAutoGifFooter.m */,
 				17688E58205B6D2D002427F8 /* YT_MJRefresh.h */,
 			);
-			path = "MJRefresh(扩展)";
+			path = YT_MJRefresh;
 			sourceTree = "<group>";
 		};
 		17C117FB202C1D7300C4629B /* MJRefresh */ = {
