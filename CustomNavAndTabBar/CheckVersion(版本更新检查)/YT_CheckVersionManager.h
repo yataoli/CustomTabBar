@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface LYUpdateVersion : NSObject
+@interface YT_CheckVersionManager : NSObject
 /**更新版本管理者*/
 + (instancetype)checkVersionManager;
 
 /**获取Appstore和本地的版本信息进行比较判断是否在当前界面弹出升级提示框*/
-- (void)checkVersionWithAPPID:(NSString *)appId;
+- (void)checkAppStoreVersionWithAPPID:(NSString *)appId;
+
+/**获取fir.im信息检查版本更新*/
+- (void)checkFir_imVersionWithAPPID:(NSString *)appId andAPI_Token:(NSString *)api_token;
 @end

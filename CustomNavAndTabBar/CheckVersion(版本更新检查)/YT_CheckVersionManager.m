@@ -6,17 +6,17 @@
 //  Copyright © 2017年 郑州鹿客互联网科技有限公司. All rights reserved.
 //
 
-#import "LYUpdateVersion.h"
-@implementation LYUpdateVersion
+#import "YT_CheckVersionManager.h"
+@implementation YT_CheckVersionManager
 + (instancetype)checkVersionManager{
-    static LYUpdateVersion *manager = nil;
+    static YT_CheckVersionManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[LYUpdateVersion alloc] init];
+        manager = [[YT_CheckVersionManager alloc] init];
     });
     return manager;
 }
-- (void)checkVersionWithAPPID:(NSString *)appId{
+- (void)checkAppStoreVersionWithAPPID:(NSString *)appId{
     NSURL *APPStoreUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/cn/lookup?id=%@",appId]];
     NSURLRequest *request = [NSURLRequest requestWithURL:APPStoreUrl];
     //系统网络请求
@@ -75,6 +75,63 @@
     }];
     [task resume];
 }
+
+#pragma mark - fir.im检查版本更新方法
+- (void)checkFir_imVersionWithAPPID:(NSString *)appId andAPI_Token:(NSString *)api_token{
+    NSURL *APPStoreUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fir.im/apps/latest/%@?api_token=%@",appId,api_token]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:APPStoreUrl];
+    //系统网络请求
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSError *err;
+        if (err) {
+            NSLog(@"从fir.im上获取APP信息错误数据===%@",err.description);
+            return ;
+        }
+        if (!data) {
+            return;
+        }
+        NSDictionary *appInfoDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
+        
+        //获取fir.im上应用的最新版本号
+        NSString * appStoreVersion  = appInfoDict[@"versionShort"];
+        
+        //获取fir.im上应用的更新日志
+        NSString * appStoreReleseNotes = appInfoDict[@"changelog"];
+        //项目名字
+//        NSString *trackName = appInfoDict[@"name"];
+        
+        //更新的时候用到的地址
+        NSString *trackViewUrl = appInfoDict[@"update_url"];
+        
+        //获取当前设备中应用的版本号
+        NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+        
+        NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
+        
+        //判断两个版本是否相同
+        if ([self compareVersionWithAppStoreVersion:appStoreVersion withcurrentVersion:currentVersion]) {
+            NSString *titleStr = [NSString stringWithFormat:@"发现新版本v%@", appStoreVersion];
+            NSString *messageStr = [NSString stringWithFormat:@"%@",appStoreReleseNotes];
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:titleStr message:messageStr preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:trackViewUrl] options:@{} completionHandler:nil];
+                //                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:trackViewUrl]];
+            }];
+            [alertController addAction:cancelAction];
+            
+            [alertController addAction:sureAction];
+            [[self getCurrentVC] presentViewController:alertController animated:YES completion:nil];
+        }else{//版本号和app store上的一致(不需要更新)
+            
+        }
+        
+    }];
+    [task resume];
+}
+
 //判断两个版本是否相同
 -(BOOL)compareVersionWithAppStoreVersion:(NSString *)appStoreVersion withcurrentVersion:(NSString *)currentVersion
 {

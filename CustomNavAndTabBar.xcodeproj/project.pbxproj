@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		170A8839202AE51100F42292 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 170A8837202AE51100F42292 /* UIView+Extension.m */; };
 		1718B3B4202E90F10084150C /* SaveAndReadFileAtSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718B3B3202E90F10084150C /* SaveAndReadFileAtSandbox.m */; };
+		17664956205F4E10009F0D27 /* YT_CheckVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17664954205F4E0F009F0D27 /* YT_CheckVersionManager.m */; };
 		17688D87205A6B8B002427F8 /* YT_Compute_Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 17688D86205A6B8B002427F8 /* YT_Compute_Object.m */; };
 		177B9B63201EEA7E0095B301 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B60201EEA7D0095B301 /* MBProgressHUD.m */; };
 		177B9B73201EEFED0095B301 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B66201EEFEC0095B301 /* error.png */; };
@@ -19,7 +20,6 @@
 		177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B6E201EEFEC0095B301 /* YTAlertView.m */; };
 		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
 		177B9B7A201EEFED0095B301 /* YTNetWorkStateMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */; };
-		177B9B7F201EF06A0095B301 /* LYUpdateVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */; };
 		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
@@ -169,6 +169,8 @@
 		170A8838202AE51100F42292 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		1718B3B2202E90F10084150C /* SaveAndReadFileAtSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveAndReadFileAtSandbox.h; sourceTree = "<group>"; };
 		1718B3B3202E90F10084150C /* SaveAndReadFileAtSandbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveAndReadFileAtSandbox.m; sourceTree = "<group>"; };
+		17664954205F4E0F009F0D27 /* YT_CheckVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_CheckVersionManager.m; sourceTree = "<group>"; };
+		17664955205F4E0F009F0D27 /* YT_CheckVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_CheckVersionManager.h; sourceTree = "<group>"; };
 		17688D85205A6B8B002427F8 /* YT_Compute_Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_Compute_Object.h; sourceTree = "<group>"; };
 		17688D86205A6B8B002427F8 /* YT_Compute_Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_Compute_Object.m; sourceTree = "<group>"; };
 		17688E58205B6D2D002427F8 /* YT_MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_MJRefresh.h; sourceTree = "<group>"; };
@@ -188,8 +190,6 @@
 		177B9B71201EEFEC0095B301 /* YTNetWorkStateMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetWorkStateMonitor.h; sourceTree = "<group>"; };
 		177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetWorkStateMonitor.m; sourceTree = "<group>"; };
 		177B9B7B201EF04A0095B301 /* YTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHeader.h; sourceTree = "<group>"; };
-		177B9B7D201EF06A0095B301 /* LYUpdateVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUpdateVersion.h; sourceTree = "<group>"; };
-		177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUpdateVersion.m; sourceTree = "<group>"; };
 		177B9B81201EF0C80095B301 /* YTInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTInfoView.m; sourceTree = "<group>"; };
 		177B9B82201EF0C80095B301 /* YTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTInfoView.h; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
@@ -453,8 +453,8 @@
 		177B9B7C201EF06A0095B301 /* CheckVersion(版本更新检查) */ = {
 			isa = PBXGroup;
 			children = (
-				177B9B7D201EF06A0095B301 /* LYUpdateVersion.h */,
-				177B9B7E201EF06A0095B301 /* LYUpdateVersion.m */,
+				17664955205F4E0F009F0D27 /* YT_CheckVersionManager.h */,
+				17664954205F4E0F009F0D27 /* YT_CheckVersionManager.m */,
 			);
 			path = "CheckVersion(版本更新检查)";
 			sourceTree = "<group>";
@@ -1239,6 +1239,7 @@
 				17C11839202C1D7400C4629B /* MJRefreshConst.m in Sources */,
 				8A1FB5131F4A7DE800DDC445 /* CustomColletionView.m in Sources */,
 				8A4525F01F5CF781004EB874 /* LoginViewModel.m in Sources */,
+				17664956205F4E10009F0D27 /* YT_CheckVersionManager.m in Sources */,
 				177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */,
 				17C11833202C1D7400C4629B /* MJRefreshBackNormalFooter.m in Sources */,
 				17C11835202C1D7400C4629B /* MJRefreshGifHeader.m in Sources */,
@@ -1257,7 +1258,6 @@
 				8A4525EA1F5CE956004EB874 /* LoginView.m in Sources */,
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
 				8A4525F61F5D0214004EB874 /* NSString+Category.m in Sources */,
-				177B9B7F201EF06A0095B301 /* LYUpdateVersion.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
 				17C1182E202C1D7400C4629B /* MJRefreshHeader.m in Sources */,
 				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
