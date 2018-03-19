@@ -77,8 +77,10 @@
 }
 
 #pragma mark - fir.im检查版本更新方法
-- (void)checkFir_imVersionWithAPPID:(NSString *)appId andAPI_Token:(NSString *)api_token{
-    NSURL *APPStoreUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fir.im/apps/latest/%@?api_token=%@",appId,api_token]];
+- (void)checkFir_imVersionWithAPI_Token:(NSString *)api_token{
+    NSString *bundle_id = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+    //    NSURL *APPStoreUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fir.im/apps/latest/%@?api_token=%@",appId,api_token]];
+    NSURL *APPStoreUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.fir.im/apps/latest/%@?api_token=%@&type=ios",bundle_id,api_token]];
     NSURLRequest *request = [NSURLRequest requestWithURL:APPStoreUrl];
     //系统网络请求
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];

@@ -16,5 +16,5 @@
 - (void)checkAppStoreVersionWithAPPID:(NSString *)appId;
 
 /**获取fir.im信息检查版本更新*/
-- (void)checkFir_imVersionWithAPPID:(NSString *)appId andAPI_Token:(NSString *)api_token;
+- (void)checkFir_imVersionWithAPI_Token:(NSString *)api_token;
 @end
