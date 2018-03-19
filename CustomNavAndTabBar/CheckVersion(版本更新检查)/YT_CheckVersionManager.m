@@ -98,6 +98,9 @@
         
         //获取fir.im上应用的更新日志
         NSString * appStoreReleseNotes = appInfoDict[@"changelog"];
+        if ([appStoreReleseNotes isKindOfClass:[NSNull class]]) {
+            appStoreReleseNotes = @"";
+        }
         //项目名字
 //        NSString *trackName = appInfoDict[@"name"];
         
