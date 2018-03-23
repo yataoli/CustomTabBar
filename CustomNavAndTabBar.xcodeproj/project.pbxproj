@@ -109,6 +109,9 @@
 		17C118C4202C235400C4629B /* dropdown_loading_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17C11885202C235400C4629B /* dropdown_loading_02@2x.png */; };
 		17C118C5202C235400C4629B /* dropdown_loading_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17C11886202C235400C4629B /* dropdown_loading_03@2x.png */; };
 		17C118C8202C24E100C4629B /* YT_MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C118C7202C24E100C4629B /* YT_MJRefreshAutoGifFooter.m */; };
+		17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F76D742064EFB50021722C /* YT_H5ViewController.m */; };
+		17F76D782064EFB50021722C /* onclick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F76D752064EFB50021722C /* onclick@2x.png */; };
+		17F76D792064EFB50021722C /* onclick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F76D762064EFB50021722C /* onclick@3x.png */; };
 		8940AECD17ADB28C6CD7A416 /* libPods-CustomNavAndTabBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087859C2768C35DE7C0D050D /* libPods-CustomNavAndTabBar.a */; };
 		8A1FB50D1F4A735F00DDC445 /* SingleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50C1F4A735F00DDC445 /* SingleCollectionViewCell.m */; };
 		8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FB50F1F4A7AC800DDC445 /* DoubleCollectionViewCell.m */; };
@@ -305,6 +308,10 @@
 		17C11886202C235400C4629B /* dropdown_loading_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_loading_03@2x.png"; sourceTree = "<group>"; };
 		17C118C6202C24E100C4629B /* YT_MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		17C118C7202C24E100C4629B /* YT_MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		17F76D732064EFB50021722C /* YT_H5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_H5ViewController.h; sourceTree = "<group>"; };
+		17F76D742064EFB50021722C /* YT_H5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_H5ViewController.m; sourceTree = "<group>"; };
+		17F76D752064EFB50021722C /* onclick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onclick@2x.png"; sourceTree = "<group>"; };
+		17F76D762064EFB50021722C /* onclick@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "onclick@3x.png"; sourceTree = "<group>"; };
 		327522932C1833A8D8310FBF /* Pods-CustomNavAndTabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavAndTabBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomNavAndTabBar/Pods-CustomNavAndTabBar.debug.xcconfig"; sourceTree = "<group>"; };
 		365155CC5532D24D9F404552 /* Pods-CustomNavAndTabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomNavAndTabBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomNavAndTabBar/Pods-CustomNavAndTabBar.release.xcconfig"; sourceTree = "<group>"; };
 		8A1FB50B1F4A735F00DDC445 /* SingleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCollectionViewCell.h; sourceTree = "<group>"; };
@@ -488,6 +495,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				17F76D722064EFB50021722C /* YT_H5ViewController */,
 				17688D84205A6B8B002427F8 /* 精确计算类 */,
 				17BFB6E2203EA58500FD395C /* 图文上下居中button */,
 				1718B3B1202E90850084150C /* 保存文件到沙盒 */,
@@ -685,6 +693,17 @@
 				17C11886202C235400C4629B /* dropdown_loading_03@2x.png */,
 			);
 			path = MJGIFGroup;
+			sourceTree = "<group>";
+		};
+		17F76D722064EFB50021722C /* YT_H5ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17F76D732064EFB50021722C /* YT_H5ViewController.h */,
+				17F76D742064EFB50021722C /* YT_H5ViewController.m */,
+				17F76D752064EFB50021722C /* onclick@2x.png */,
+				17F76D762064EFB50021722C /* onclick@3x.png */,
+			);
+			path = YT_H5ViewController;
 			sourceTree = "<group>";
 		};
 		24E09C02DC24AF4E2B989A3A /* Pods */ = {
@@ -1063,6 +1082,7 @@
 				17C118A2202C235400C4629B /* dropdown_anim__00035@2x.png in Resources */,
 				17C118BF202C235400C4629B /* dropdown_anim__0006@2x.png in Resources */,
 				8AA3B7321F384D2C001E70A7 /* 1098.bundle in Resources */,
+				17F76D792064EFB50021722C /* onclick@3x.png in Resources */,
 				17C1189B202C235400C4629B /* dropdown_anim__00029@2x.png in Resources */,
 				17C118B0202C235400C4629B /* dropdown_anim__00048@2x.png in Resources */,
 				8AA3B7351F384D2C001E70A7 /* 1111.bundle in Resources */,
@@ -1130,6 +1150,7 @@
 				177B9B73201EEFED0095B301 /* error.png in Resources */,
 				17C1189C202C235400C4629B /* dropdown_anim__0002@2x.png in Resources */,
 				8A69A1F11F2B0652004F8BD4 /* Assets.xcassets in Resources */,
+				17F76D782064EFB50021722C /* onclick@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1259,6 +1280,7 @@
 				8AA3B7261F383E23001E70A7 /* SkinViewController.m in Sources */,
 				8A4525F61F5D0214004EB874 /* NSString+Category.m in Sources */,
 				8A69A21C1F2B0805004F8BD4 /* HomeViewController.m in Sources */,
+				17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */,
 				17C1182E202C1D7400C4629B /* MJRefreshHeader.m in Sources */,
 				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
 				177B9B77201EEFED0095B301 /* UIColor+Hexadecimal.m in Sources */,
