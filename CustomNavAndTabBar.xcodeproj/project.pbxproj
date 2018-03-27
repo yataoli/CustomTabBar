@@ -21,6 +21,7 @@
 		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
 		177B9B7A201EEFED0095B301 /* YTNetWorkStateMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B72201EEFEC0095B301 /* YTNetWorkStateMonitor.m */; };
 		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
+		1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782A1A6206A19EA0013FAED /* YT_PagingView.m */; };
 		17BFB6E5203EA5B000FD395C /* YT_CenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */; };
 		17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C117FE202C1D7300C4629B /* MJRefreshAutoFooter.m */; };
 		17C1182B202C1D7400C4629B /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C11800202C1D7300C4629B /* MJRefreshBackFooter.m */; };
@@ -195,6 +196,8 @@
 		177B9B7B201EF04A0095B301 /* YTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHeader.h; sourceTree = "<group>"; };
 		177B9B81201EF0C80095B301 /* YTInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTInfoView.m; sourceTree = "<group>"; };
 		177B9B82201EF0C80095B301 /* YTInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTInfoView.h; sourceTree = "<group>"; };
+		1782A1A5206A19EA0013FAED /* YT_PagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YT_PagingView.h; sourceTree = "<group>"; };
+		1782A1A6206A19EA0013FAED /* YT_PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YT_PagingView.m; sourceTree = "<group>"; };
 		17BFB6E3203EA5B000FD395C /* YT_CenterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YT_CenterButton.h; sourceTree = "<group>"; };
 		17BFB6E4203EA5B000FD395C /* YT_CenterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YT_CenterButton.m; sourceTree = "<group>"; };
 		17C117FD202C1D7300C4629B /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -475,6 +478,15 @@
 			path = "文字提示框";
 			sourceTree = "<group>";
 		};
+		1782A1A4206A19EA0013FAED /* 竖向滑动条 */ = {
+			isa = PBXGroup;
+			children = (
+				1782A1A5206A19EA0013FAED /* YT_PagingView.h */,
+				1782A1A6206A19EA0013FAED /* YT_PagingView.m */,
+			);
+			path = "竖向滑动条";
+			sourceTree = "<group>";
+		};
 		178E4208E9B83FA6A862E4FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +507,7 @@
 		17C117B6202BF29100C4629B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1782A1A4206A19EA0013FAED /* 竖向滑动条 */,
 				17F76D722064EFB50021722C /* YT_H5ViewController */,
 				17688D84205A6B8B002427F8 /* 精确计算类 */,
 				17BFB6E2203EA58500FD395C /* 图文上下居中button */,
@@ -1267,6 +1280,7 @@
 				17C1183D202C1D7400C4629B /* UIView+MJExtension.m in Sources */,
 				17C11846202C200600C4629B /* YT_MJRefreshGifHeader.m in Sources */,
 				17C11834202C1D7400C4629B /* MJRefreshBackStateFooter.m in Sources */,
+				1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */,
 				8A69A1E61F2B0652004F8BD4 /* main.m in Sources */,
 				8AA3B73A1F385016001E70A7 /* MyNavigationViewController.m in Sources */,
 				8A4525ED1F5CEC0A004EB874 /* UITextField+Category.m in Sources */,
