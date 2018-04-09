@@ -1046,7 +1046,7 @@
 				TargetAttributes = {
 					8A69A1E01F2B0652004F8BD4 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = U63U66XAN7;
+						DevelopmentTeam = KM92J7XX6C;
 						ProvisioningStyle = Automatic;
 					};
 					8A69A1F91F2B0653004F8BD4 = {
@@ -1444,7 +1444,7 @@
 			baseConfigurationReference = 327522932C1833A8D8310FBF /* Pods-CustomNavAndTabBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U63U66XAN7;
+				DEVELOPMENT_TEAM = KM92J7XX6C;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomNavAndTabBar/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1460,7 +1460,7 @@
 			baseConfigurationReference = 365155CC5532D24D9F404552 /* Pods-CustomNavAndTabBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U63U66XAN7;
+				DEVELOPMENT_TEAM = KM92J7XX6C;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomNavAndTabBar/PrefixHeader.pch";
 				INFOPLIST_FILE = CustomNavAndTabBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

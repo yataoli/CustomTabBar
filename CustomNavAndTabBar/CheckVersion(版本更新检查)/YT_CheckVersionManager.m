@@ -23,7 +23,7 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSError *err;
-        if (err) {
+        if (error != nil) {
             NSLog(@"从appstore上获取APP信息错误数据===%@",err.description);
             return ;
         }
@@ -36,6 +36,7 @@
             NSLog(@"error : resultArray == nil");
             return;
         }
+        NSLog(@"APPStore 信息 == %@",appInfoDict);
         NSDictionary *infoDict = [resultArray objectAtIndex:0];
         
         //获取appstore上应用的最新版本号
@@ -86,11 +87,15 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSError *err;
-        if (err) {
-            NSLog(@"从fir.im上获取APP信息错误数据===%@",err.description);
+        if (error != nil) {
+            NSLog(@"从fir.im上获取APP信息错误数据===%@",error.description);
             return ;
         }
         if (!data) {
+            return;
+        }
+        NSString *TempString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if ([TempString containsString:@"app is not found"]) {
             return;
         }
         NSDictionary *appInfoDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
@@ -104,7 +109,7 @@
             appStoreReleseNotes = @"";
         }
         //项目名字
-//        NSString *trackName = appInfoDict[@"name"];
+        //        NSString *trackName = appInfoDict[@"name"];
         
         //更新的时候用到的地址
         NSString *trackViewUrl = appInfoDict[@"update_url"];

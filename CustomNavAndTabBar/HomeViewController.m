@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "CustomColletionView.h"
 #import "SaveAndReadFileAtSandbox.h"
-
+#import "YT_CheckVersionManager.h"
 #define ScreenBounds [UIScreen mainScreen].bounds
 #define ScreenWidth ScreenBounds.size.width
 #define ScreenHeight ScreenBounds.size.height
@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor redColor];
-   
+    [[YT_CheckVersionManager checkVersionManager] checkAppStoreVersionWithAPPID:@"1367104970"];
     [self createUI];
     /*
     self.collectionView.mj_header = [YT_MJRefreshHeader headerWithRefreshingBlock:^{
