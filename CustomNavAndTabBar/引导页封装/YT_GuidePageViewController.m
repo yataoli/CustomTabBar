@@ -17,23 +17,23 @@
 - (instancetype)initWithImageNameArray:(NSArray *)images{
     if (self = [super init]) {
         self.enterBtnArray = [[NSMutableArray alloc] initWithCapacity:0];
-        UIScrollView *gui = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-        gui.delegate = self;
-        gui.pagingEnabled = YES;
+        UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+        scrollView.delegate = self;
+        scrollView.pagingEnabled = YES;
         // 隐藏滑动条
-        gui.showsHorizontalScrollIndicator = NO;
-        gui.showsVerticalScrollIndicator = NO;
+        scrollView.showsHorizontalScrollIndicator = NO;
+        scrollView.showsVerticalScrollIndicator = NO;
         // 取消反弹
-        gui.bounces = NO;
+        scrollView.bounces = NO;
         for (NSInteger i = 0; i < images.count; i ++) {
-            [gui addSubview:({
-                self.btnEnter = [UIButton buttonWithType:UIButtonTypeCustom];
-                self.btnEnter.frame = CGRectMake([UIScreen mainScreen].bounds.size.width * i, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-                [self.btnEnter setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];;
-                self.btnEnter;
-            })];
             
-            [self.btnEnter addSubview:({
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width * i, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+            imageView.image = [UIImage imageNamed:images[i]];
+            imageView.userInteractionEnabled = YES;
+            [scrollView addSubview:imageView];
+            
+            
+            [imageView addSubview:({
                 UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
                 [btn setTitle:@"跳过" forState:UIControlStateNormal];
                 if (i == images.count - 1) {
@@ -56,8 +56,8 @@
             
             
         }
-        gui.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width * images.count, 0);
-        [self.view addSubview:gui];
+        scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width * images.count, 0);
+        [self.view addSubview:scrollView];
         
         // pageControl
         self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width / 2, 30)];
@@ -121,14 +121,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

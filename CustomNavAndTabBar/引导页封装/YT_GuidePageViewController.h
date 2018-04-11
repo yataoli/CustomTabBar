@@ -61,7 +61,6 @@
 @interface YT_GuidePageViewController : UIViewController
 - (instancetype)initWithImageNameArray:(NSArray *)images;
 + (BOOL)isFirstShow;
-@property (nonatomic, strong) UIButton *btnEnter;
 @property (nonatomic, weak) id<YT_GuidePageViewControllerDelegate> delegate;
 /**pageControl的正常颜色和选中颜色数组(默认为浅白色和白色)*/ 
 @property (nonatomic,strong) NSArray * pageControlNomalAndSelecteColorArray;
