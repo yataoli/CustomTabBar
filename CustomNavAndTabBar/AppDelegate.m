@@ -30,8 +30,8 @@
 //        NSArray *imageArray = @[@"1",@"3.jpeg",@"4.jpeg",@"5.jpeg"];
 //        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageNameArray:imageArray];
         
-        NSArray *imageArray = @[@"http://47.92.5.70/fz/img/q10.png",@"http://47.92.5.70/fz/img/q11.png",@"http://47.92.5.70/fz/img/q12.png",@"http://47.92.5.70/fz/img/q13.png"];
-        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageUrlArray:imageArray];
+//        NSArray *imageArray = @[@"http://47.92.5.70/fz/img/q10.png",@"http://47.92.5.70/fz/img/q11.png",@"http://47.92.5.70/fz/img/q12.png",@"http://47.92.5.70/fz/img/q13.png"];
+        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageUrlArray:Guide_imagesArray];
 
         VC.delegate = self;
         //设置pageControl的颜色 默认为浅白色和白色

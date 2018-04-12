@@ -170,18 +170,21 @@
 /**统一网络请求*/
 + (void)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock{
     
+   __weak typeof(self) weakSelf = self;
     /*! 检查地址中是否有中文 */
-    NSString *URLString = [NSURL URLWithString:urlStr] ? urlStr : [self strUTF8Encoding:urlStr];
+    NSString *URLString = [NSURL URLWithString:urlStr] ? urlStr : [weakSelf strUTF8Encoding:urlStr];
     
     switch (type) {
         case HTTP_REQUEST_GET:{
             [[NetworkingManager shareManager].sessionManager GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [weakSelf resetNetWorkingConfig];
                 if (success){
                     success(responseObject);
                 }
                 
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [weakSelf resetNetWorkingConfig];
                 if (errorBlock)
                 {
                     errorBlock(error);
@@ -195,11 +198,13 @@
             [[NetworkingManager shareManager].sessionManager POST:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
                 
             } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [weakSelf resetNetWorkingConfig];
                 if (success){
                     success(responseObject);
                 }
 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [weakSelf resetNetWorkingConfig];
                 if (errorBlock){
                     errorBlock(error);
                 }
@@ -211,6 +216,14 @@
         }
             break;
     }
+    
+}
+#pragma mark - 重新配置网络请求
++ (void)resetNetWorkingConfig{
+    [NetworkingManager shareManager].sessionManager.requestSerializer.timeoutInterval = 30;
+    [NetworkingManager shareManager].sessionManager.requestSerializer = [AFJSONRequestSerializer serializer] ;
+    [NetworkingManager shareManager].httpHeaderFieldDictionary = nil;
+    [NetworkingManager shareManager].sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     
 }
 #pragma mark - url 中文格式化
