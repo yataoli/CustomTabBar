@@ -10,7 +10,8 @@
 #import "BaseTabBarController.h"
 #import "PushViewController.h"
 #import "YT_GuidePageViewController.h"
-@interface AppDelegate ()<UITabBarControllerDelegate,YT_GuidePageViewControllerDelegate>
+#import "YT_NetWorkStateMonitor.h"
+@interface AppDelegate ()<UITabBarControllerDelegate,YT_GuidePageViewControllerDelegate,YTNetWorkStateMonitorDelegate>
 
 @end
 
@@ -21,6 +22,10 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] getNetWorkType];
+    [YT_NetWorkStateMonitor shareNetWorkStateMonitor].delegate = self;
+    [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] addNetWorkStateMonitor];
     
     BOOL isFirstShow = [YT_GuidePageViewController isFirstShow];
     isFirstShow = YES;
@@ -56,6 +61,17 @@
     self.window.rootViewController = baseBar;
     
 
+}
+#pragma mark - 网络类型切换监听
+- (void)netWorkStateChangedWithType:(NSString *)type{
+    if ([type isEqualToString:@"NO"]) {
+        [[YTAlertViewManager shareManager] showWithType:AlertViewTypeNoNetwork];
+    }else{
+        [[YTAlertViewManager shareManager] showWithType:AlertViewTypeSuccess];
+        [YTAlertViewManager shareManager].topTxt = type;
+    }
+    [[YTAlertViewManager shareManager] dismissAfterTime:1];
+    
 }
 #pragma mark - 将要选中tabBar上按钮的时候会调用这个协议方法
 

@@ -11,6 +11,10 @@
 @interface YTAlertViewManager : NSObject
 @property (nonatomic,strong)YTAlertView *alertView;
 + (YTAlertViewManager *)shareManager;
+//文字
+@property (nonatomic,strong) NSString * topTxt;
+//图片
+@property (nonatomic,strong) UIImage * iconImage;
 /**显示顶部弹窗*/
 - (void)showWithType:(AlertViewType)type;
 /**在几秒后移除顶部弹窗*/

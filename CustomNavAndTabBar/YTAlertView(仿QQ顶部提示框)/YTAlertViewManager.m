@@ -23,7 +23,12 @@
     });
     return shareManager;
 }
-
+- (void)setTopTxt:(NSString *)topTxt{
+    self.alertView.tipsLabel.text = topTxt;
+}
+- (void)setIconImage:(UIImage *)iconImage{
+    self.alertView.imageView.image = iconImage;
+}
 #pragma mark 显示弹窗
 - (void)showWithType:(AlertViewType)type
 {
