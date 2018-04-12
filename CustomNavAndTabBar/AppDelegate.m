@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "BaseTabBarController.h"
 #import "PushViewController.h"
-@interface AppDelegate ()<UITabBarControllerDelegate>
+#import "YT_GuidePageViewController.h"
+@interface AppDelegate ()<UITabBarControllerDelegate,YT_GuidePageViewControllerDelegate>
 
 @end
 
@@ -20,15 +21,42 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    BaseTabBarController *baseBar = [[BaseTabBarController alloc] init];
-    baseBar.delegate = self;
-    self.window.rootViewController = baseBar;
-    [self.window makeKeyAndVisible];
     
+    BOOL isFirstShow = [YT_GuidePageViewController isFirstShow];
+    isFirstShow = YES;
+    if (isFirstShow == YES) {
+        //显示引导页
+        //存放图片的数组
+//        NSArray *imageArray = @[@"1",@"3.jpeg",@"4.jpeg",@"5.jpeg"];
+//        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageNameArray:imageArray];
+        
+        NSArray *imageArray = @[@"http://47.92.5.70/fz/img/q10.png",@"http://47.92.5.70/fz/img/q11.png",@"http://47.92.5.70/fz/img/q12.png",@"http://47.92.5.70/fz/img/q13.png"];
+        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageUrlArray:imageArray];
+
+        VC.delegate = self;
+        //设置pageControl的颜色 默认为浅白色和白色
+        //VC.pageControlNomalAndSelecteColorArray = @[[UIColor lightGrayColor],[UIColor redColor]];
+        //设置前边几页是否显示跳过按钮  默认不展示
+        //VC.everyPageShowEnterBtn = NO;
+        self.window.rootViewController = VC;
+        NSLog(@"进入引导页");
+        
+    }else{
+        //进入主页
+        NSLog(@"直接进入主页");
+        [self enterViewController];
+    }
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
+- (void)enterViewController{
+    BaseTabBarController *baseBar = [[BaseTabBarController alloc] init];
+    baseBar.delegate = self;
+    self.window.rootViewController = baseBar;
+    
 
+}
 #pragma mark - 将要选中tabBar上按钮的时候会调用这个协议方法
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
