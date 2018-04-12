@@ -128,6 +128,7 @@
         self.pageControl.currentPageIndicatorTintColor = pageControlNomalAndSelecteColorArray[1];
     }
     
+    
 }
 #pragma mark - 设置除了最后一页的跳过按钮是否显示
 - (void)setEveryPageShowEnterBtn:(BOOL)everyPageShowEnterBtn{

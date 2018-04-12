@@ -49,9 +49,6 @@ typedef void(^HttpRequesError)(NSError *error);
 /**创建单例类*/
 + (instancetype)shareManager;
 
-///**是否显示hud*/
-//@property (nonatomic) BOOL hasHud;
-
 /**
  设置请求参数的格式（默认HttpRequestSerializerJSON）
  */
@@ -76,7 +73,7 @@ typedef void(^HttpRequesError)(NSError *error);
  *  @param success        请求成功，数据回调
  *  @param errorBlock          请求失败，数据回调
  */
-+ (void)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock;
++ (NSURLSessionDataTask *)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock;
 
 
 @end

@@ -35,7 +35,7 @@
 
         VC.delegate = self;
         //设置pageControl的颜色 默认为浅白色和白色
-        //VC.pageControlNomalAndSelecteColorArray = @[[UIColor lightGrayColor],[UIColor redColor]];
+        VC.pageControlNomalAndSelecteColorArray = @[[UIColor lightGrayColor],[UIColor redColor]];
         //设置前边几页是否显示跳过按钮  默认不展示
         //VC.everyPageShowEnterBtn = NO;
         self.window.rootViewController = VC;

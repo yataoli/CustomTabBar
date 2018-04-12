@@ -10,13 +10,13 @@
 
 @interface NetworkingManager ()
 @property (nonatomic,strong) AFHTTPSessionManager *sessionManager;
-@property (nonatomic,strong) MBProgressHUD *hud;
+
 @end
 
 
 @implementation NetworkingManager
 
-/**创建单例类*/
+#pragma mark - 创建单例类
 + (instancetype)shareManager{
     
     static NetworkingManager *manager = nil;
@@ -45,9 +45,8 @@
     [self ba_setupSecurityPolicy];
 }
 
-/**
- 配置自建证书的Https请求，只需要将CA证书文件放入根目录就行
- */
+
+#pragma mark - 配置自建证书的Https请求，只需要将CA证书文件放入根目录就行
 + (void)ba_setupSecurityPolicy
 {
     //    NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
@@ -87,19 +86,19 @@
     }
 }
 
-/**自定义请求头*/
+#pragma mark - 自定义请求头
 - (void)setHttpHeaderFieldDictionary:(NSDictionary *)httpHeaderFieldDictionary{
     _httpHeaderFieldDictionary = httpHeaderFieldDictionary;
     if (![httpHeaderFieldDictionary isKindOfClass:[NSDictionary class]])
     {
-        NSLog(@"请求头数据有误，请检查！");
+        //NSLog(@"请求头数据有误，请检查！");
         return;
     }
     NSArray *keyArray = httpHeaderFieldDictionary.allKeys;
     
     if (keyArray.count <= 0)
     {
-        NSLog(@"请求头数据有误，请检查！");
+        //NSLog(@"请求头数据有误，请检查！");
         return;
     }
     
@@ -117,9 +116,8 @@
     [[NetworkingManager shareManager].sessionManager.requestSerializer setValue:value forHTTPHeaderField:HTTPHeaderKey];
 }
 
-/**
- 设置请求参数的格式（默认HttpRequestSerializerJSON）
-*/
+
+#pragma mark - 设置请求参数的格式（默认HttpRequestSerializerJSON）
 - (void)setRequestSerializer:(HttpRequestSerializer)requestSerializer
 {
     _requestSerializer = requestSerializer;
@@ -139,9 +137,8 @@
             break;
     }
 }
-/**
- 设置请求响应的格式（默认HttpResponseSerializerJSON）
- */
+
+#pragma mark - 设置请求响应的格式（默认HttpResponseSerializerJSON）
 - (void)setResponseSerializer:(HttpResponseSerializer)responseSerializer
 {
     _responseSerializer = responseSerializer;
@@ -162,62 +159,58 @@
     }
 }
 
-/**请求超时时间（默认为30秒）*/
+#pragma mark - 请求超时时间（默认为30秒）
 - (void)setTimeoutInterval:(NSTimeInterval)timeoutInterval{
     _timeoutInterval = timeoutInterval;
     [NetworkingManager shareManager].sessionManager.requestSerializer.timeoutInterval = _timeoutInterval;
 }
-/**统一网络请求*/
-+ (void)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock{
+#pragma mark - 统一网络请求
++ (NSURLSessionDataTask *)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock{
     
    __weak typeof(self) weakSelf = self;
     /*! 检查地址中是否有中文 */
     NSString *URLString = [NSURL URLWithString:urlStr] ? urlStr : [weakSelf strUTF8Encoding:urlStr];
-    
-    switch (type) {
-        case HTTP_REQUEST_GET:{
-            [[NetworkingManager shareManager].sessionManager GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                [weakSelf resetNetWorkingConfig];
-                if (success){
-                    success(responseObject);
-                }
-                
-                
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                [weakSelf resetNetWorkingConfig];
-                if (errorBlock)
-                {
-                    errorBlock(error);
-                }
-            }];
-        }
-            
-            break;
-        case HTTP_REQUEST_POST:{
-            
-            [[NetworkingManager shareManager].sessionManager POST:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-                
-            } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                [weakSelf resetNetWorkingConfig];
-                if (success){
-                    success(responseObject);
-                }
-
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                [weakSelf resetNetWorkingConfig];
-                if (errorBlock){
-                    errorBlock(error);
-                }
-
-            }];
+    if (type == 0) {
+        NSURLSessionDataTask *task = [[NetworkingManager shareManager].sessionManager GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [weakSelf resetNetWorkingConfig];
+            if (success){
+                success(responseObject);
+            }
             
             
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [weakSelf resetNetWorkingConfig];
+            if (errorBlock)
+            {
+                errorBlock(error);
+            }
+        }];
+        return task;
+    }else{
+        
+        NSURLSessionDataTask *task = [[NetworkingManager shareManager].sessionManager POST:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
             
-        }
-            break;
+        } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [weakSelf resetNetWorkingConfig];
+            if (success){
+                success(responseObject);
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [weakSelf resetNetWorkingConfig];
+            if (errorBlock){
+                errorBlock(error);
+            }
+            
+        }];
+        
+        return task;
+        
+        
     }
     
 }
+
 #pragma mark - 重新配置网络请求
 + (void)resetNetWorkingConfig{
     [NetworkingManager shareManager].sessionManager.requestSerializer.timeoutInterval = 30;
