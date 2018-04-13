@@ -15,8 +15,6 @@
 		177B9B73201EEFED0095B301 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B66201EEFEC0095B301 /* error.png */; };
 		177B9B74201EEFED0095B301 /* nonetwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B67201EEFEC0095B301 /* nonetwork.png */; };
 		177B9B76201EEFED0095B301 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 177B9B6A201EEFEC0095B301 /* success.png */; };
-		177B9B77201EEFED0095B301 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B6C201EEFEC0095B301 /* UIColor+Hexadecimal.m */; };
-		177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B6E201EEFEC0095B301 /* YTAlertView.m */; };
 		177B9B79201EEFED0095B301 /* YTAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */; };
 		177B9B83201EF0C80095B301 /* YTInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 177B9B81201EF0C80095B301 /* YTInfoView.m */; };
 		1782A1A7206A19EB0013FAED /* YT_PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782A1A6206A19EA0013FAED /* YT_PagingView.m */; };
@@ -184,10 +182,6 @@
 		177B9B66201EEFEC0095B301 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		177B9B67201EEFEC0095B301 /* nonetwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nonetwork.png; sourceTree = "<group>"; };
 		177B9B6A201EEFEC0095B301 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
-		177B9B6B201EEFEC0095B301 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
-		177B9B6C201EEFEC0095B301 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
-		177B9B6D201EEFEC0095B301 /* YTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAlertView.h; sourceTree = "<group>"; };
-		177B9B6E201EEFEC0095B301 /* YTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAlertView.m; sourceTree = "<group>"; };
 		177B9B6F201EEFEC0095B301 /* YTAlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAlertViewManager.h; sourceTree = "<group>"; };
 		177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAlertViewManager.m; sourceTree = "<group>"; };
 		177B9B7B201EF04A0095B301 /* YTHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHeader.h; sourceTree = "<group>"; };
@@ -450,10 +444,6 @@
 				177B9B66201EEFEC0095B301 /* error.png */,
 				177B9B67201EEFEC0095B301 /* nonetwork.png */,
 				177B9B6A201EEFEC0095B301 /* success.png */,
-				177B9B6B201EEFEC0095B301 /* UIColor+Hexadecimal.h */,
-				177B9B6C201EEFEC0095B301 /* UIColor+Hexadecimal.m */,
-				177B9B6D201EEFEC0095B301 /* YTAlertView.h */,
-				177B9B6E201EEFEC0095B301 /* YTAlertView.m */,
 				177B9B6F201EEFEC0095B301 /* YTAlertViewManager.h */,
 				177B9B70201EEFEC0095B301 /* YTAlertViewManager.m */,
 			);
@@ -1291,7 +1281,6 @@
 				8A1FB5101F4A7AC800DDC445 /* DoubleCollectionViewCell.m in Sources */,
 				8A69A2191F2B07C2004F8BD4 /* BaseTabBarController.m in Sources */,
 				17C1182A202C1D7400C4629B /* MJRefreshAutoFooter.m in Sources */,
-				177B9B78201EEFED0095B301 /* YTAlertView.m in Sources */,
 				1718B3B4202E90F10084150C /* SaveAndReadFileAtSandbox.m in Sources */,
 				17C11839202C1D7400C4629B /* MJRefreshConst.m in Sources */,
 				17ED62CF207F4C750051B25F /* YT_NetWorkStateMonitor.m in Sources */,
@@ -1322,7 +1311,6 @@
 				17F76D772064EFB50021722C /* YT_H5ViewController.m in Sources */,
 				17C1182E202C1D7400C4629B /* MJRefreshHeader.m in Sources */,
 				8A4525FB1F5D2BFB004EB874 /* MeMessageModel.m in Sources */,
-				177B9B77201EEFED0095B301 /* UIColor+Hexadecimal.m in Sources */,
 				17C11832202C1D7400C4629B /* MJRefreshBackGifFooter.m in Sources */,
 				8A69A2281F2B0F4D004F8BD4 /* MyTabBar.m in Sources */,
 			);

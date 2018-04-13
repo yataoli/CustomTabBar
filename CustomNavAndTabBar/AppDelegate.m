@@ -67,10 +67,13 @@
     if ([type isEqualToString:@"NO"]) {
         [[YTAlertViewManager shareManager] showWithType:AlertViewTypeNoNetwork];
     }else{
+        
         [[YTAlertViewManager shareManager] showWithType:AlertViewTypeSuccess];
         [YTAlertViewManager shareManager].topTxt = type;
+        [YTAlertViewManager shareManager].lefImageName = @"post_animate_add";
+        
     }
-    [[YTAlertViewManager shareManager] dismissAfterTime:1];
+    [[YTAlertViewManager shareManager] dismissAfterTime:3];
     
 }
 #pragma mark - 将要选中tabBar上按钮的时候会调用这个协议方法
