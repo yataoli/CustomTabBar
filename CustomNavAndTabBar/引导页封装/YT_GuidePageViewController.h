@@ -59,10 +59,9 @@
 @end
 
 @interface YT_GuidePageViewController : UIViewController
-/**本地图片*/
-- (instancetype)initWithImageNameArray:(NSArray *)images;
-/**网络获取图片*/
-- (instancetype)initWithImageUrlArray:(NSArray *)images;
+
+/**初始化 图片数组（图片名字或者url 字符串）*/
+- (instancetype)initWithImageArray:(NSArray *)images;
 + (BOOL)isFirstShow;
 @property (nonatomic, weak) id<YT_GuidePageViewControllerDelegate> delegate;
 /**pageControl的正常颜色和选中颜色数组(默认为浅白色和白色)*/ 

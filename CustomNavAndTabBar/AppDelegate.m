@@ -23,6 +23,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    NSString *urlString = @"baidu.com";
+    BOOL isUrl = [urlString isUrlString];
+    NSLog(@"isUrl == %@",@(isUrl));
+    
     [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] getNetWorkType];
     [YT_NetWorkStateMonitor shareNetWorkStateMonitor].delegate = self;
     [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] addNetWorkStateMonitor];
@@ -36,7 +40,7 @@
 //        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageNameArray:imageArray];
         
 //        NSArray *imageArray = @[@"http://47.92.5.70/fz/img/q10.png",@"http://47.92.5.70/fz/img/q11.png",@"http://47.92.5.70/fz/img/q12.png",@"http://47.92.5.70/fz/img/q13.png"];
-        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageUrlArray:Guide_imagesArray];
+        YT_GuidePageViewController *VC = [[YT_GuidePageViewController alloc] initWithImageArray:Guide_imagesArray];
 
         VC.delegate = self;
         //设置pageControl的颜色 默认为浅白色和白色

@@ -33,6 +33,11 @@
 /**正则匹配用户身份证号 15 或 18 位*/
 - (BOOL)checkUserIdCard;
 
+/**
+ *正则匹配URL    
+ */
+- (BOOL)isUrlString;
+
 // 非空判断
 +(BOOL)isNULL:(id)string;
 

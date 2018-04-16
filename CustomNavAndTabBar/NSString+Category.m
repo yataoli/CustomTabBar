@@ -90,6 +90,13 @@
     BOOL isMatch = [pred evaluateWithObject:self];
     return isMatch;
 }
+#pragma mark - 正则匹配URL
+- (BOOL)isUrlString{
+    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+    NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:self];
+    return isMatch;
+}
 
 //  判断字符串是否为空
 +(BOOL)isNULL:(id)string{

@@ -21,6 +21,6 @@
 
 #define passwordKey @"?-oRb7wKsY^@>&sW"
 
-#define Guide_imagesArray @[@"http://p71yuflyr.bkt.clouddn.com/guideImageOne.jpeg",@"http://p71yuflyr.bkt.clouddn.com/guideImageTwo.jpeg"]
+#define Guide_imagesArray @[@"hahaha",@"http://p71yuflyr.bkt.clouddn.com/guideImageOne.jpeg",@"http://p71yuflyr.bkt.clouddn.com/guideImageTwo.jpeg"]
 
 #endif /* Header_h */
