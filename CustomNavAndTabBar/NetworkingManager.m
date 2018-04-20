@@ -169,7 +169,9 @@
     
    __weak typeof(self) weakSelf = self;
     /*! 检查地址中是否有中文 */
-    NSString *URLString = [NSURL URLWithString:urlStr] ? urlStr : [weakSelf strUTF8Encoding:urlStr];
+    NSString *URLString = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+//    [NSURL URLWithString:urlStr] ? urlStr : [weakSelf strUTF8Encoding:urlStr];
     if (type == 0) {
         NSURLSessionDataTask *task = [[NetworkingManager shareManager].sessionManager GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             [weakSelf resetNetWorkingConfig];
@@ -222,12 +224,15 @@
 #pragma mark - url 中文格式化
 + (NSString *)strUTF8Encoding:(NSString *)str
 {
-    /*! ios9适配的话 打开第一个 */
+    return [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    /*
+    // ios9适配的话 打开第一个
     if ([[UIDevice currentDevice] systemVersion].floatValue >= 9.0)
     {
         return [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     }else{
         return [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     }
+    */
 }
 @end
