@@ -32,7 +32,7 @@
     [[YT_NetWorkStateMonitor shareNetWorkStateMonitor] addNetWorkStateMonitor];
     
     BOOL isFirstShow = [YT_GuidePageViewController isFirstShow];
-    isFirstShow = YES;
+//    isFirstShow = YES;
     if (isFirstShow == YES) {
         //显示引导页
         //存放图片的数组
