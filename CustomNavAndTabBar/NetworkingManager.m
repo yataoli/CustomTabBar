@@ -278,6 +278,11 @@
     [NetworkingManager shareManager].sessionManager.requestSerializer.timeoutInterval = 30;
     [NetworkingManager shareManager].httpHeaderFieldDictionary = nil;
     
+    
+}
+#pragma mark - 清理cookie
++ (void)clearnCookie{
+    [NetworkingManager shareManager].sessionManager.requestSerializer.HTTPShouldHandleCookies = NO;
 }
 
 @end

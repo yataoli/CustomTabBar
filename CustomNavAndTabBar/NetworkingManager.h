@@ -57,9 +57,14 @@ typedef void(^URLSessionDataTask)(NSURLSessionDataTask *task);
 
 @interface NetworkingManager : NSObject
 
-/**创建单例类*/
+/**
+ *创建单例类
+ */
 + (instancetype)shareManager;
-
+/**
+ *清理cookie (一般在退出登录的时候清理一下)
+ */
++ (void)clearnCookie;
 /**
  设置请求参数的格式（默认HttpRequestSerializerJSON）
  */
