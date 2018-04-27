@@ -81,6 +81,31 @@
     [_moveBtn setBackgroundImage:[UIImage imageNamed:@"商品列表样式1"] forState:UIControlStateSelected];
     [self.view addSubview:_moveBtn];
     
+    /*
+    [NetworkingManager GET:@"http://p71yuflyr.bkt.clouddn.com/GuideData.txt" responeseType:HttpResponseData parameters:nil successBlock:^(id responseObject) {
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"请求成功 == %@",string);
+    } failure:^(NSError *error) {
+        NSLog(@"请求失败 error == %@",error.description);
+    } sessionDataTask:^(NSURLSessionDataTask *task) {
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSDictionary *allHeaders = response.allHeaderFields;
+        NSLog(@"响应头内容 == %@",allHeaders);
+    }];
+    */
+    /*
+    [NetworkingManager POST:@"http://p71yuflyr.bkt.clouddn.com/GuideData.txt" responeseType:HttpResponseData parameters:nil successBlock:^(id responseObject) {
+        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"请求成功 == %@",string);
+
+    } failure:^(NSError *error) {
+         NSLog(@"请求失败 error == %@",error.description);
+    } sessionDataTask:^(NSURLSessionDataTask *task) {
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSDictionary *allHeaders = response.allHeaderFields;
+        NSLog(@"响应头内容 == %@",allHeaders);
+    }];
+    */
     
 
 }

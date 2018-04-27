@@ -35,11 +35,22 @@ typedef NS_ENUM(NSUInteger,HttpResponseSerializer) {
     HttpResponseSerializerData,
 };
 
+/**响应数据类型枚举*/
+typedef NS_ENUM(NSUInteger,HttpResponseType) {
+    /**响应数据（默认）为json格式*/
+    HttpResponseJSON = 0,
+    /**响应数据为二进制数据*/
+    HttpResponseData,
+};
+
 /**请求成功回调block*/
 typedef void(^HttpRequetSuccess)(id responseObject);
 
 /**请求失败回调block*/
 typedef void(^HttpRequesError)(NSError *error);
+
+/**返回响应头信息*/
+typedef void(^URLSessionDataTask)(NSURLSessionDataTask *task);
 
 
 
@@ -75,5 +86,6 @@ typedef void(^HttpRequesError)(NSError *error);
  */
 + (NSURLSessionDataTask *)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock;
 
-
++ (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask;
++ (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask;
 @end

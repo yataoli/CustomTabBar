@@ -40,7 +40,7 @@
     manager.timeoutInterval = 30;
     
     manager.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"text/html",@"application/json", nil];
-
+    
     // 配置自建证书的Https请求
     [self ba_setupSecurityPolicy];
 }
@@ -109,7 +109,7 @@
         
         [NetworkingManager ba_setValue:valueString forHTTPHeaderKey:keyString];
     }
-
+    
 }
 + (void)ba_setValue:(NSString *)value forHTTPHeaderKey:(NSString *)HTTPHeaderKey
 {
@@ -167,11 +167,10 @@
 #pragma mark - 统一网络请求
 + (NSURLSessionDataTask *)requestType:(HttpRquestType)type urlString:(NSString *)urlStr parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock{
     
-   __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     /*! 检查地址中是否有中文 */
     NSString *URLString = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-//    [NSURL URLWithString:urlStr] ? urlStr : [weakSelf strUTF8Encoding:urlStr];
     if (type == 0) {
         NSURLSessionDataTask *task = [[NetworkingManager shareManager].sessionManager GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             [weakSelf resetNetWorkingConfig];
@@ -212,27 +211,73 @@
     }
     
 }
-
++ (NSURLSessionDataTask *)GET:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask{
+    __weak typeof(self) weakSelf = self;
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    if (responseType == 1){
+        [NetworkingManager shareManager].sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer] ;
+    }else{
+        [NetworkingManager shareManager].sessionManager.responseSerializer = [AFJSONResponseSerializer serializer] ;
+    }
+    NSURLSessionDataTask *task = [[NetworkingManager shareManager].sessionManager GET:urlString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [weakSelf resetNetWorkingConfig];
+        if (success){
+            success(responseObject);
+        }
+        if (dataTask) {
+            dataTask(task);
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [weakSelf resetNetWorkingConfig];
+        if (errorBlock)
+        {
+            errorBlock(error);
+        }
+        if (dataTask) {
+            dataTask(task);
+        }
+    }];
+    return task;
+}
++ (NSURLSessionDataTask *)POST:(NSString *)urlString responeseType:(HttpResponseType )responseType parameters:(NSDictionary *)params successBlock:(HttpRequetSuccess)success failure:(HttpRequesError)errorBlock sessionDataTask:(URLSessionDataTask)dataTask{
+    __weak typeof(self) weakSelf = self;
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    if (responseType == 1){
+        [NetworkingManager shareManager].sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer] ;
+    }else{
+        [NetworkingManager shareManager].sessionManager.responseSerializer = [AFJSONResponseSerializer serializer] ;
+    }
+    NSURLSessionDataTask *task = [[NetworkingManager shareManager].sessionManager POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [weakSelf resetNetWorkingConfig];
+        if (success){
+            success(responseObject);
+        }
+        if (dataTask) {
+            dataTask(task);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [weakSelf resetNetWorkingConfig];
+        if (errorBlock){
+            errorBlock(error);
+        }
+        if (dataTask) {
+            dataTask(task);
+        }
+        
+    }];
+    
+    return task;
+}
 #pragma mark - 重新配置网络请求
 + (void)resetNetWorkingConfig{
     [NetworkingManager shareManager].sessionManager.requestSerializer.timeoutInterval = 30;
-    [NetworkingManager shareManager].sessionManager.requestSerializer = [AFJSONRequestSerializer serializer] ;
     [NetworkingManager shareManager].httpHeaderFieldDictionary = nil;
-    [NetworkingManager shareManager].sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     
 }
-#pragma mark - url 中文格式化
-+ (NSString *)strUTF8Encoding:(NSString *)str
-{
-    return [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    /*
-    // ios9适配的话 打开第一个
-    if ([[UIDevice currentDevice] systemVersion].floatValue >= 9.0)
-    {
-        return [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
-    }else{
-        return [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    }
-    */
-}
+
 @end
