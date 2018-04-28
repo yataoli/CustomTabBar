@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface NSString (Category)
 //计算字符串空间大小
 - (CGRect)rectWithStringBoundingSize:(CGSize )stringSize withStringFont:(UIFont *)font;
@@ -23,7 +23,10 @@
 
 /**把字典转换成JSON格式字符串*/
 + (NSString *)DicToJsonStringWithDic:(NSDictionary *)dic ;
-
+/**
+ * 把json字符串转化为json格式数据
+ */
+- (id)stringToJSON;
 /**正则匹配手机号码*/
 - (BOOL)checkTelNumber;
 /**
@@ -37,6 +40,15 @@
  *正则匹配URL    
  */
 - (BOOL)isUrlString;
+/**
+ * 正则匹配用户名是否可用(数字字母下划线横杠汉字)
+ */
+- (BOOL)checkAccount;
+
+/**
+ * 正则匹配纯数字
+ */
+- (BOOL)checkAllNumber;
 
 // 非空判断
 +(BOOL)isNULL:(id)string;

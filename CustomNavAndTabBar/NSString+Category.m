@@ -65,6 +65,11 @@
     return dicDataJsonString;
 }
 
+#pragma mark - 把json字符串转化为json格式数据
+- (id)stringToJSON{
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+}
 /**正则匹配手机号码*/
 - (BOOL)checkTelNumber
 {
@@ -97,7 +102,20 @@
     BOOL isMatch = [pred evaluateWithObject:self];
     return isMatch;
 }
-
+#pragma mark - 正则匹配用户名是否可用(数字字母下划线横杠汉字)
+- (BOOL)checkAccount{
+    NSString *pattern = @"^[a-zA-Z0-9_\\-\u4e00-\u9fa5]+$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:self];
+    return isMatch;
+}
+#pragma mark - 正则匹配纯数字
+- (BOOL)checkAllNumber{
+    NSString *pattern = @"[0-9]*";
+    NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:self];
+    return isMatch;
+}
 //  判断字符串是否为空
 +(BOOL)isNULL:(id)string{
     
